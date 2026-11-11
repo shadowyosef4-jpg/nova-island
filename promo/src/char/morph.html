@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>Island to character</title>
+  <style>
+    @font-face { font-family: "Plex Arabic"; font-weight: 600; src: url("../assets/plex-arabic-600.woff2") format("woff2"); }
+    @font-face { font-family: "Plex Arabic"; font-weight: 400; src: url("../assets/plex-arabic-400.woff2") format("woff2"); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1600px; height: 560px; overflow: hidden; color: #fff; font-family: "Plex Arabic", "Segoe UI", sans-serif;
+      background: radial-gradient(40% 60% at 15% 30%, rgba(124, 58, 237, .4), transparent 70%),
+                  radial-gradient(40% 60% at 85% 70%, rgba(59, 130, 246, .38), transparent 70%),
+                  linear-gradient(160deg, #110d26, #0b1128 60%, #09091a); }
+    h1 { position: absolute; top: 26px; right: 50px; margin: 0; font-size: 36px; font-weight: 600; direction: rtl; }
+    h1 small { display: block; font-size: 18px; font-weight: 400; color: rgba(255,255,255,.65); margin-top: 4px; }
+    .row { position: absolute; top: 140px; left: 40px; right: 40px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; direction: rtl; }
+    .f { position: relative; height: 340px; border-radius: 24px; background: rgba(255,255,255,.045); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+    .f svg { direction: ltr; position: absolute; left: 50%; top: 44%; transform: translate(-50%, -50%); overflow: visible; }
+    .n { position: absolute; top: 12px; right: 18px; font: 600 20px "Segoe UI"; color: #ffd479; }
+    .t { position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; font-size: 21px; font-weight: 600; }
+    .d { position: absolute; bottom: 14px; left: 10px; right: 10px; text-align: center; font-size: 14px; color: rgba(255,255,255,.6); }
+    .arrow { position: absolute; top: 50%; left: -16px; font-size: 22px; color: rgba(255,212,121,.7); transform: translateY(-50%); }
+  </style>
+</head>
+<body>
+  <h1>الجزيرة تتحوّل إلى «نوفا»<small>حين تقترب ويبقى المؤشر ٣ ثوانٍ، أو مع الأذان والأخبار المهمة — ثم تعود جزيرة</small></h1>
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a38"/><stop offset="1" stop-color="#101018"/></linearGradient>
+    <g id="pill"><rect x="-66" y="-24" width="132" height="48" rx="24" fill="url(#gGlass)"/><rect x="-66" y="-24" width="132" height="48" rx="24" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1.5"/><rect x="-66" y="-24" width="132" height="24" rx="12" fill="#fff" opacity=".05"/></g>
+    <g id="eyes"><rect x="-15" y="-11" width="10" height="14" rx="5" fill="#fff"/><rect x="5" y="-11" width="10" height="14" rx="5" fill="#fff"/><circle cx="-9" cy="-3" r="3.2" fill="#0b0b12"/><circle cx="11" cy="-3" r="3.2" fill="#0b0b12"/></g>
+  </defs></svg>
+  <div class="row">
+    <div class="f"><span class="n">1</span>
+      <svg width="200" height="160" viewBox="-100 -80 200 160">
+        <use href="#pill"/>
+        <text x="-46" y="6" font-family="Segoe UI" font-weight="700" font-size="15" fill="#fff">10:24</text>
+        <text x="16" y="6" font-family="Segoe UI" font-size="13" fill="#fff" fill-opacity=".6">Oct 29</text>
+      </svg>
+      <div class="t">الجزيرة</div><div class="d">كما هي: الساعة والتاريخ</div>
+    </div>
+    <div class="f"><span class="n">2</span><span class="arrow">◀</span>
+      <svg width="200" height="160" viewBox="-100 -80 200 160">
+        <g transform="scale(1.1,0.8)"><use href="#pill"/></g>
+        <text x="-46" y="6" font-family="Segoe UI" font-weight="700" font-size="15" fill="#fff" fill-opacity=".25">10:24</text>
+      </svg>
+      <div class="t">تنضغط</div><div class="d">النص يتلاشى، والكبسولة تأخذ نفَسًا</div>
+    </div>
+    <div class="f"><span class="n">3</span><span class="arrow">◀</span>
+      <svg width="200" height="160" viewBox="-100 -80 200 160">
+        <g transform="scale(0.95,1.08)"><use href="#pill"/></g>
+        <use href="#eyes"/>
+      </svg>
+      <div class="t">تفتح عينيها</div><div class="d">بارتداد ناعم، وترمش مرة</div>
+    </div>
+    <div class="f"><span class="n">4</span><span class="arrow">◀</span>
+      <svg width="200" height="200" viewBox="-100 -90 200 200">
+        <path d="M-18 20 L-20 46 M18 20 L20 46" stroke="#5a5a72" stroke-width="7" stroke-linecap="round"/>
+        <ellipse cx="-23" cy="49" rx="11" ry="6" fill="#4a4a60" stroke="#fff" stroke-opacity=".45"/><ellipse cx="23" cy="49" rx="11" ry="6" fill="#4a4a60" stroke="#fff" stroke-opacity=".45"/>
+        <path d="M-62 0 Q-76 10 -70 24 M62 0 Q76 10 70 24" fill="none" stroke="#5a5a72" stroke-width="7" stroke-linecap="round"/>
+        <use href="#pill"/><use href="#eyes"/>
+        <path d="M-5 9 Q0 12.5 5 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <div class="t">تُخرج يديها وقدميها</div><div class="d">تنزلق للخارج من تحت الكبسولة</div>
+    </div>
+    <div class="f"><span class="n">5</span><span class="arrow">◀</span>
+      <svg width="200" height="220" viewBox="-100 -110 200 220">
+        <ellipse cx="0" cy="68" rx="46" ry="6" fill="#000" opacity=".35"/>
+        <g transform="translate(0,-14)">
+          <path d="M-18 20 L-22 44 M18 20 L22 44" stroke="#5a5a72" stroke-width="7" stroke-linecap="round"/>
+          <ellipse cx="-25" cy="47" rx="11" ry="6" fill="#4a4a60" stroke="#fff" stroke-opacity=".45"/><ellipse cx="25" cy="47" rx="11" ry="6" fill="#4a4a60" stroke="#fff" stroke-opacity=".45"/>
+          <path d="M-62 0 Q-76 10 -70 24 M62 -2 Q76 -18 72 -38" fill="none" stroke="#5a5a72" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="72" cy="-42" r="7" fill="#5a5a72" stroke="#fff" stroke-opacity=".5"/>
+          <path d="M84 -52 q6 4 4 10" fill="none" stroke="#ffd479" stroke-width="2" stroke-linecap="round"/>
+          <use href="#pill"/><use href="#eyes"/>
+          <path d="M-5 9 Q0 12.5 5 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="t">تقفز وتلوّح 👋</div><div class="d">ثم تجلس… وتعود جزيرة حين تبتعد</div>
+    </div>
+  </div>
+</body>
+</html>

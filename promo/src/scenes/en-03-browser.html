@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../promo.css">
+  <style>
+    .copy { left: 90px; top: 280px; width: 540px; }
+    .copy h1 { font-size: 62px; }
+    .window.browser { left: 690px; top: 196px; width: 1160px; height: 770px; }
+    .page { display: flex; gap: 26px; padding: 24px; background: #101016; height: calc(100% - 96px); }
+    .player { flex: 1; min-width: 0; }
+    .player .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: url("../assets/video.jpg") center / cover; }
+    .player .frame::after { content: ""; position: absolute; inset: auto 0 0; height: 70px; background: linear-gradient(transparent, rgba(0, 0, 0, .55)); }
+    .player .bar { position: absolute; left: 18px; right: 18px; bottom: 18px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .3); z-index: 1; }
+    .player .bar b { display: block; width: 40%; height: 100%; border-radius: 2px; background: #ff4d6d; }
+    .player h2 { font: 600 22px var(--ui); margin: 18px 0 8px; }
+    .player .meta { display: flex; align-items: center; gap: 12px; font: 14px var(--ui); color: var(--txt-3); }
+    .player .meta i { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #ff6b6b, #7c3aed); }
+    .player .meta b { color: #fff; font-weight: 600; }
+    .side { width: 300px; display: flex; flex-direction: column; gap: 14px; }
+    .side .it { display: flex; gap: 12px; }
+    .side .th { width: 140px; height: 79px; border-radius: 10px; flex: none; background: var(--g); }
+    .side .tx { font: 13px var(--ui); color: var(--txt-2); line-height: 1.45; }
+    .side .tx b { display: block; color: #fff; font-weight: 600; margin-bottom: 4px; }
+    .mini {
+      position: absolute; left: 420px; top: 690px; width: 520px; height: 293px; border-radius: 18px; overflow: hidden;
+      background: url("../assets/video.jpg") center / cover;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 40px 90px -16px rgba(0, 0, 0, .8);
+    }
+    .mini::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(0, 0, 0, .35), transparent 30%, transparent 65%, rgba(0, 0, 0, .55)); }
+    .mini .btns { position: absolute; top: 14px; left: 14px; right: 14px; display: flex; justify-content: space-between; }
+    .mini .btns span { width: 38px; height: 38px; border-radius: 50%; background: rgba(20, 20, 28, .55); backdrop-filter: blur(10px); display: grid; place-items: center; font: 600 17px var(--ui); }
+    .mini .prog { position: absolute; left: 18px; right: 18px; bottom: 16px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .3); }
+    .mini .prog b { display: block; width: 40%; height: 100%; border-radius: 2px; background: #fff; }
+    .tag {
+      position: absolute; padding: 12px 18px; border-radius: 16px; font-size: 20px; font-weight: 500;
+      background: rgba(18, 18, 28, .7); backdrop-filter: blur(20px); box-shadow: inset 0 0 0 1px var(--stroke), 0 16px 40px -12px rgba(0, 0, 0, .6);
+    }
+    .tag b { color: #ffd479; }
+  </style>
+</head>
+<body>
+  <div class="wall wall-dusk"></div>
+
+  <div class="window browser">
+    <div class="tabstrip">
+      <div class="tab on" style="--c:#ff4d6d"><i></i>Golden Hour — Live at the Lake</div>
+      <div class="tab" style="--c:#60a5fa"><i></i>Design notes</div>
+      <div class="tab" style="--c:#34d399"><i></i>Inbox (3)</div>
+      <div class="ctrls">—&nbsp;&nbsp;▢&nbsp;&nbsp;✕</div>
+    </div>
+    <div class="addr"><span class="dot"></span><span class="dot"></span><div class="bar">nova.video<em>/watch?v=golden-hour-live</em></div></div>
+    <div class="page">
+      <div class="player">
+        <div class="frame"><div class="bar"><b></b></div></div>
+        <h2>Golden Hour — Live at the Lake</h2>
+        <div class="meta"><i></i><b>Nova Sessions</b> · 1.2M views · 2 days ago</div>
+      </div>
+      <div class="side">
+        <div class="it"><span class="th" style="--g:linear-gradient(135deg,#f97316,#db2777)"></span><span class="tx"><b>Night Drive</b>Nova Sessions</span></div>
+        <div class="it"><span class="th" style="--g:linear-gradient(135deg,#0ea5e9,#6366f1)"></span><span class="tx"><b>Ocean Room</b>Blue Hour</span></div>
+        <div class="it"><span class="th" style="--g:linear-gradient(135deg,#22c55e,#0f766e)"></span><span class="tx"><b>Forest Rain</b>Ambient Lab</span></div>
+        <div class="it"><span class="th" style="--g:linear-gradient(135deg,#a855f7,#ec4899)"></span><span class="tx"><b>Neon Bloom</b>Nova Sessions</span></div>
+        <div class="it"><span class="th" style="--g:linear-gradient(135deg,#eab308,#ea580c)"></span><span class="tx"><b>Desert Sun</b>Wanderlust</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mini">
+    <div class="btns"><span>✕</span><span>↩</span></div>
+    <div class="prog"><b></b></div>
+  </div>
+  <div class="tag" style="left: 420px; top: 998px;">Floating player <b>picks up at the same second</b></div>
+  <div class="tag" style="left: 300px; top: 112px;">Title and waveforms <b>while you browse</b></div>
+
+  <!--ISLANDS-->
+
+  <div class="copy">
+    <div class="brand"><span class="mark"><i></i></span>Nova Island</div>
+    <h1>Keeps playing<br><span class="hl">while you browse</span></h1>
+    <p>Leave the video tab and the island carries on: title, artwork and live waveforms, plus a floating mini player in one click.</p>
+  </div>
+  <script src="../mock.js"></script>
+  <script src="../scene.js"></script>
+</body>
+</html>

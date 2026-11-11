@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.log
+__pycache__/
+promo/src/out/
+promo/src/scenes/_*.html
+promo/src/prefs.html

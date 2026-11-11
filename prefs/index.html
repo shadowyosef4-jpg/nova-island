@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:">
+  <title>Nova Island Settings</title>
+  <link rel="stylesheet" href="../themes.css">
+  <link rel="stylesheet" href="prefs.css">
+</head>
+<body>
+  <header class="titlebar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><i></i></span>
+      <b>Nova Island</b>
+    </div>
+    <div class="win-btns">
+      <button data-win="minimize" aria-label="Minimize"><svg viewBox="0 0 12 12"><path d="M2 6h8"/></svg></button>
+      <button data-win="close" class="close" aria-label="Close"><svg viewBox="0 0 12 12"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7"/></svg></button>
+    </div>
+  </header>
+
+  <div class="body">
+    <nav class="side" aria-label="Pages">
+      <label class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="find" placeholder="Search" spellcheck="false" autocomplete="off">
+      </label>
+      <a href="#general" data-page="general"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>General</a>
+      <a href="#island" data-page="island"><svg viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="8" rx="4"/></svg>Island</a>
+      <a href="#themes-page" data-page="themes-page"><svg viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 1 10-10c0 2.8-2.2 4-4.5 4H15a2 2 0 0 0-1.5 3.3A1.6 1.6 0 0 1 12 22Z"/><circle cx="7.5" cy="10.5" r="1.2"/><circle cx="12" cy="7" r="1.2"/><circle cx="16.5" cy="10.5" r="1.2"/></svg>Themes</a>
+      <a href="#companion" data-page="companion"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>Companion</a>
+      <a href="#faith" data-page="faith"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>Prayer &amp; Dhikr</a>
+      <a href="#alerts" data-page="alerts"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Alerts &amp; Privacy</a>
+      <a href="#connections" data-page="connections"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Connections</a>
+      <a href="#share-page" data-page="share-page"><svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>File Share &amp; FTP</a>
+      <a href="#plugins" data-page="plugins"><svg viewBox="0 0 24 24"><path d="M19.4 13.6a2.4 2.4 0 1 0 0-3.2H18V7a1 1 0 0 0-1-1h-3.4V4.6a2.4 2.4 0 1 0-3.2 0V6H7a1 1 0 0 0-1 1v3.4H4.6a2.4 2.4 0 1 0 0 3.2H6V17a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3.4Z"/></svg>Plugins</a>
+      <a href="#support" data-page="support"><svg viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Support</a>
+      <a href="#more" data-page="more"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>More by Nova</a>
+      <button class="side-social" data-support="facebook" title="facebook.com/nova4kit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6A21 21 0 0 0 14.6 2.5C12.2 2.5 10.6 4 10.6 6.6v1.9H8v3.2h2.6V21.5H14v-9.8h2.6l.4-3.2H14Z"/></svg>
+        <span>Nova on Facebook</span>
+      </button>
+      <p class="side-foot"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>I</kbd> opens the island<br><span id="version"></span></p>
+    </nav>
+
+    <main class="content" id="content">
+      <p class="no-results" id="no-results" hidden>No matching settings</p>
+
+      <!-- GENERAL -->
+      <section id="general" class="page">
+        <h1>General</h1>
+        <div class="group">
+          <div class="card">
+            <label class="row"><b>Show island</b><input type="checkbox" class="sw" data-general="shown"></label>
+            <label class="row" id="startup-row"><b>Start with Windows</b><input type="checkbox" class="sw" data-general="startWithWindows"></label>
+            <div class="row" id="startup-store-row" hidden><div class="txt"><b>Start with Windows</b><small>Managed by Windows for the Store version</small></div><button class="btn" data-support="startupapps">Open startup apps</button></div>
+            <div class="row"><b>Orientation</b>
+              <div class="seg" role="radiogroup" aria-label="Orientation">
+                <button role="radio" data-orient="h">Horizontal</button>
+                <button role="radio" data-orient="v">Vertical</button>
+              </div>
+            </div>
+            <div class="row"><div class="txt"><b>In the browser</b><small id="browser-hint"></small></div>
+              <div class="seg" role="radiogroup" aria-label="In the browser">
+                <button role="radio" data-browser="addr">Address bar</button>
+                <button role="radio" data-browser="stay">Stay in place</button>
+              </div>
+            </div>
+            <label class="row"><b>Hide in full screen</b><input type="checkbox" class="sw" data-feature="hideFullscreen"></label>
+            <label class="row" id="update-row"><b>Auto-update</b><input type="checkbox" class="sw" data-feature="autoUpdate"></label>
+            <div class="row"><b>Position</b><button class="btn" data-general-action="resetPosition">Reset</button></div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Performance</h2>
+          <div class="card">
+            <label class="row"><div class="txt"><b>Remove blur</b><small>A solid island; the screen is not captured</small></div><input type="checkbox" class="sw" data-feature="noBlur"></label>
+            <label class="row"><b>Remove animations</b><input type="checkbox" class="sw" data-feature="noAnimations"></label>
+            <label class="row" data-needs="!noBlur"><div class="txt"><b>Freeze glass while closed</b><small>The glass refreshes only while the island is open</small></div><input type="checkbox" class="sw" data-feature="glassFreeze"></label>
+            <label class="row" id="saver-row"><div class="txt"><b>Battery saver</b><small id="saver-note">Turns all three on when the battery runs low</small></div><input type="checkbox" class="sw" data-feature="batterySaver"></label>
+            <div class="row sub" data-needs="batterySaver"><b>Below</b>
+              <div class="stepper" data-num="batterySaverAt" data-steps="10,15,20,25,30,40,50,60,70,80,90,100" data-unit="%"><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Location</h2>
+          <div class="card">
+            <div class="row"><div class="txt"><b>City</b><small id="loc-now">Auto</small></div><button class="btn" id="loc-auto" hidden>Use auto</button></div>
+            <div class="row field">
+              <input type="search" id="loc-q" placeholder="Search for a city" spellcheck="false" autocomplete="off">
+              <button class="btn" id="loc-go">Search</button>
+            </div>
+            <div class="loc-results" id="loc-results" hidden></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ISLAND -->
+      <section id="island" class="page">
+        <h1>Island</h1>
+        <div class="group">
+          <h2>Tabs</h2>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" data-feature="tabMedia" data-tab><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><b>Media</b></label>
+            <label class="chip"><input type="checkbox" data-feature="tabApps" data-tab><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><b>Apps</b></label>
+            <label class="chip"><input type="checkbox" data-feature="tabShelf" data-tab><svg viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/></svg><b>Shelf</b></label>
+            <label class="chip"><input type="checkbox" data-feature="tabPrayer" data-tab><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><b>Prayer</b></label>
+            <label class="chip"><input type="checkbox" data-feature="tabTimer" data-tab><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M10 2h4"/></svg><b>Timer</b></label>
+            <label class="chip"><input type="checkbox" data-feature="tabSystem" data-tab><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><b>System</b></label>
+            <label class="chip"><input type="checkbox" data-feature="tabShare" data-tab><svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg><b>Share</b></label>
+          </div>
+          <p class="hint warn" id="tabs-warn" hidden>Keep at least one tab</p>
+        </div>
+        <div class="group">
+          <h2>Collapsed</h2>
+          <div class="card">
+            <label class="row"><b>Clock &amp; weather</b><input type="checkbox" class="sw" data-feature="slideClock"></label>
+            <label class="row"><b>CPU &amp; memory</b><input type="checkbox" class="sw" data-feature="slideStats"></label>
+            <label class="row"><b>Next prayer</b><input type="checkbox" class="sw" data-feature="slidePrayer"></label>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Now playing</h2>
+          <div class="card">
+            <label class="row"><b>Show media</b><input type="checkbox" class="sw" data-feature="mediaPill"></label>
+            <label class="row sub" data-needs="mediaPill"><b>Title</b><input type="checkbox" class="sw" data-feature="mediaTitle"></label>
+            <label class="row"><b>New track card</b><input type="checkbox" class="sw" data-feature="trackPeek"></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- THEMES -->
+      <section id="themes-page" class="page">
+        <h1>Themes</h1>
+        <p class="lead">Give the island a new look. Every theme is free, and none of them makes Nova heavier; solid themes are even lighter.</p>
+        <div class="group">
+          <div class="themes" id="themes" role="radiogroup" aria-label="Theme"></div>
+        </div>
+      </section>
+
+      <!-- COMPANION -->
+      <section id="companion" class="page">
+        <h1>Companion</h1>
+        <div class="group">
+          <h2>Nova</h2>
+          <div class="card">
+            <label class="row"><b>Eyes</b><input type="checkbox" class="sw" data-feature="novaEyes"></label>
+            <label class="row"><b>At the adhan</b><input type="checkbox" class="sw" data-feature="novaPrayer"></label>
+            <label class="row"><b>Focus sessions</b><input type="checkbox" class="sw" data-feature="novaFocus"></label>
+            <label class="row"><b>Celebrations</b><input type="checkbox" class="sw" data-feature="celebrate"></label>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Moments</h2>
+          <div class="card">
+            <label class="row"><b>Morning brief</b><input type="checkbox" class="sw" data-feature="morningBrief"></label>
+            <label class="row"><b>Welcome back</b><input type="checkbox" class="sw" data-feature="welcomeBack"></label>
+            <label class="row"><b>Break reminders</b><input type="checkbox" class="sw" data-feature="wellbeing"></label>
+            <label class="row"><b>Network</b><input type="checkbox" class="sw" data-feature="netToasts"></label>
+            <label class="row"><div class="txt"><b>Smart clipboard</b><small>Links, colors, math</small></div><input type="checkbox" class="sw" data-feature="smartClipboard"></label>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Water</h2>
+          <div class="card">
+            <label class="row"><b>Water reminder</b><input type="checkbox" class="sw" data-feature="water"></label>
+            <div class="row sub" data-needs="water"><b>Every</b>
+              <div class="stepper" data-num="waterEvery" data-steps="15,30,45,60,90,120,180,240" data-unit="min"><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+            <div class="row sub" data-needs="water"><b>Daily goal</b>
+              <div class="stepper" data-num="waterGoal" data-steps="4,5,6,7,8,9,10,11,12,14,16" data-unit="glass"><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRAYER & DHIKR -->
+      <section id="faith" class="page">
+        <h1>Prayer &amp; Dhikr</h1>
+        <div class="group">
+          <h2>Prayer</h2>
+          <div class="card">
+            <label class="row"><b>Prayer alerts</b><input type="checkbox" class="sw" data-feature="prayerAlerts"></label>
+            <label class="row"><b>Hanafi Asr</b><input type="checkbox" class="sw" data-feature="asrHanafi"></label>
+            <div class="row"><div class="txt"><b>Hijri date</b><small>Match local moon sighting</small></div>
+              <div class="stepper" data-num="hijriAdjust" data-steps="-2,-1,0,1,2" data-unit="day"><button data-dir="-1" aria-label="One day less">−</button><output></output><button data-dir="1" aria-label="One day more">+</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Dhikr, du'a &amp; Qur'an</h2>
+          <div class="card">
+            <label class="row"><b>Show reminders</b><input type="checkbox" class="sw" data-feature="reminders"></label>
+            <div class="row sub" data-needs="reminders"><b>Every</b>
+              <div class="stepper" data-num="remindEvery" data-steps="1,2,3,5,10,15,20,30,45,60,90,120,180,240" data-unit="min"><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+            <div class="row sub" data-needs="reminders"><b>On screen for</b>
+              <div class="stepper" data-num="remindFor" data-steps="10,15,20,30,45,60,90,120,180,300" data-unit="s"><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+            <label class="row sub" data-needs="reminders"><b>Qur'an verses</b><input type="checkbox" class="sw" data-feature="remindAyah" data-kind></label>
+            <label class="row sub" data-needs="reminders"><b>Dhikr</b><input type="checkbox" class="sw" data-feature="remindDhikr" data-kind></label>
+            <label class="row sub" data-needs="reminders"><b>Du'a</b><input type="checkbox" class="sw" data-feature="remindDua" data-kind></label>
+            <label class="row sub" data-needs="reminders"><b>Quiet hours</b><input type="checkbox" class="sw" data-feature="quietHours"></label>
+            <div class="row sub2" data-needs="reminders quietHours"><b>From</b>
+              <div class="stepper" data-num="quietFrom" data-steps="time" data-unit="time"><button data-dir="-1" aria-label="Earlier">−</button><output></output><button data-dir="1" aria-label="Later">+</button></div>
+            </div>
+            <div class="row sub2" data-needs="reminders quietHours"><b>To</b>
+              <div class="stepper" data-num="quietTo" data-steps="time" data-unit="time"><button data-dir="-1" aria-label="Earlier">−</button><output></output><button data-dir="1" aria-label="Later">+</button></div>
+            </div>
+          </div>
+          <div class="actions"><button class="btn accent" id="rm-preview">Show one now</button></div>
+        </div>
+      </section>
+
+      <!-- ALERTS & PRIVACY -->
+      <section id="alerts" class="page">
+        <h1>Alerts &amp; Privacy</h1>
+        <div class="group">
+          <h2>Alerts</h2>
+          <div class="card">
+            <label class="row"><b>Volume</b><input type="checkbox" class="sw" data-feature="hudVolume"></label>
+            <label class="row"><b>Brightness</b><input type="checkbox" class="sw" data-feature="hudBrightness"></label>
+            <label class="row"><b>Battery</b><input type="checkbox" class="sw" data-feature="battery"></label>
+            <label class="row"><b>Keyboard language</b><input type="checkbox" class="sw" data-feature="kbdToast"></label>
+            <label class="row"><b>Caps Lock</b><input type="checkbox" class="sw" data-feature="capsToast"></label>
+            <label class="row"><div class="txt"><b>News from Nova</b><small>Plugins, updates and news from the Nova team. Nothing is sent from your PC.</small></div><input type="checkbox" class="sw" data-feature="news"></label>
+            <label class="row"><b>Screenshots</b><input type="checkbox" class="sw" data-feature="screenshotToast"></label>
+            <label class="row sub" data-needs="screenshotToast"><div class="txt"><b>Save screenshots to Shelf</b><small>The file stays where it was saved</small></div><input type="checkbox" class="sw" data-feature="shotAutoShelf"></label>
+            <div class="row sub2" data-needs="screenshotToast shotAutoShelf"><b>Keep on Shelf</b>
+              <div class="stepper" data-num="shotShelfMinutes" data-steps="5,10,20,30,60,120,240,480,1440" data-unit="min"><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Privacy</h2>
+          <div class="card">
+            <label class="row"><b>Mic &amp; camera dots</b><input type="checkbox" class="sw" data-feature="privacyDots"></label>
+            <label class="row"><div class="txt"><b>Clipboard history</b><small>Kept in memory only</small></div><input type="checkbox" class="sw" data-feature="clipboardHistory"></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONNECTIONS -->
+      <section id="connections" class="page">
+        <h1>Connections</h1>
+        <div class="group">
+          <h2>Calendar</h2>
+          <div class="card">
+            <label class="row"><b>Upcoming meetings</b><input type="checkbox" class="sw" data-feature="meetings"></label>
+            <div class="row field" data-needs="meetings">
+              <input type="url" id="cal-url" placeholder="iCal link (https://… .ics)" spellcheck="false" autocomplete="off">
+              <button class="btn" id="cal-save">Save</button>
+            </div>
+            <div class="row" data-needs="meetings"><b>Status</b><small class="val" id="cal-status">Not linked</small></div>
+          </div>
+          <details class="how" data-needs="meetings">
+            <summary>How to get the link</summary>
+            <p><b>Google:</b> Settings › your calendar › Secret address in iCal format</p>
+            <p><b>Outlook:</b> Settings › Calendar › Shared calendars › Publish (ICS)</p>
+          </details>
+        </div>
+        <div class="group">
+          <h2>Downloads</h2>
+          <div class="card">
+            <label class="row"><b>IDM Nova downloads</b><input type="checkbox" class="sw" data-feature="downloads"></label>
+            <label class="row"><div class="txt"><b>Browser downloads</b><small>Chrome, Edge, Firefox and others</small></div><input type="checkbox" class="sw" data-feature="folderDownloads"></label>
+            <label class="row"><b>Download alerts</b><input type="checkbox" class="sw" data-feature="dlToasts"></label>
+          </div>
+          <div class="card folders" data-needs="folderDownloads">
+            <div id="dl-folders"></div>
+            <div class="row"><div class="txt"><b>Download folders</b><small>Where your browser saves files</small></div><button class="btn" id="dl-folder-add">Add folder</button></div>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Troubleshooting</h2>
+          <div class="card">
+            <div class="row"><div class="txt"><b>System helper</b><small id="bridge-detail" hidden></small></div><span class="status" id="bridge-state">…</span></div>
+            <div class="row"><b>Error log</b>
+              <div class="btns"><button class="btn" id="open-log">Open</button><button class="btn" id="copy-report">Copy report</button></div>
+            </div>
+            <div class="row"><b>All settings</b><button class="btn danger" id="reset-all">Reset</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILE SHARE & FTP -->
+      <section id="share-page" class="page">
+        <h1>File Share &amp; FTP</h1>
+        <p class="lead">Transfer files between your devices, stream media, and access your PC wirelessly.</p>
+
+        <div class="group">
+          <h2>Storage &amp; Drive Navigation</h2>
+          <div class="card">
+            <div class="row">
+              <div class="txt">
+                <b>Root Directory Mode</b>
+                <small>Choose between full disk access or a single folder</small>
+              </div>
+              <div class="seg" role="radiogroup" aria-label="Root mode">
+                <button role="radio" data-share-mode="drives">All Drives (C:, D:...)</button>
+                <button role="radio" data-share-mode="custom">Custom Folder</button>
+              </div>
+            </div>
+            <div class="row" id="custom-folder-row">
+              <div class="txt">
+                <b>Custom folder</b>
+                <small id="share-folder-path">Default: Downloads</small>
+              </div>
+              <button class="btn" id="btn-change-share-folder">Choose folder</button>
+            </div>
+            <label class="row">
+              <div class="txt">
+                <b>Read only mode</b>
+                <small>Prevent connected devices from uploading, renaming, or deleting</small>
+              </div>
+              <input type="checkbox" class="sw" data-feature="shareReadOnly">
+            </label>
+          </div>
+        </div>
+
+        <div class="group">
+          <h2>Servers Configuration</h2>
+          <div class="card">
+            <div class="row">
+              <b>Web / WiFi Share Port</b>
+              <div class="stepper" data-num="sharePortWeb" data-steps="5050,8080,8000,8888,3000" data-unit=""><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+            <div class="row">
+              <b>FTP Server Port</b>
+              <div class="stepper" data-num="sharePortFtp" data-steps="2121,21,2125,2020" data-unit=""><button data-dir="-1" aria-label="Less">−</button><output></output><button data-dir="1" aria-label="More">+</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group">
+          <h2>Security &amp; Password</h2>
+          <div class="card">
+            <label class="row">
+              <div class="txt">
+                <b>Require username &amp; password</b>
+                <small>Protect Web and FTP access</small>
+              </div>
+              <input type="checkbox" class="sw" data-feature="shareAuth">
+            </label>
+            <div class="row field" data-needs="shareAuth">
+              <input type="text" id="share-user-input" placeholder="Username (default: nova)" spellcheck="false" autocomplete="off">
+            </div>
+            <div class="row field" data-needs="shareAuth">
+              <input type="password" id="share-pass-input" placeholder="Password (leave empty for none)" spellcheck="false" autocomplete="off">
+              <button class="btn" id="share-auth-save">Save credentials</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLUGINS -->
+      <section id="plugins" class="page">
+        <h1>Plugins</h1>
+        <p class="lead">Extra features you add only if you want them. Every plugin is checked before it installs.</p>
+        <div class="group">
+          <div class="plug-bar">
+            <div class="seg" role="radiogroup" aria-label="Show">
+              <button role="radio" data-plug-filter="all" aria-checked="true">All</button>
+              <button role="radio" data-plug-filter="installed">Installed</button>
+            </div>
+          </div>
+          <div class="card plug-list" id="plug-list"><div class="row"><small class="val">Loading…</small></div></div>
+          <p class="hint" id="plug-note" hidden></p>
+          <div class="actions"><button class="btn" id="plug-file">Install from a file…</button></div>
+        </div>
+      </section>
+
+      <!-- SUPPORT -->
+      <section id="support" class="page">
+        <h1>Support</h1>
+        <p class="lead">Nova Island is free, with no ads, and always will be. If it makes your day a little better:</p>
+        <div class="group">
+          <div class="card">
+            <div class="row"><div class="txt"><b>Buy us a coffee</b><small>Ko-fi · cards and PayPal</small></div><button class="btn accent" data-support="kofi">Ko-fi</button></div>
+            <div class="row"><div class="txt"><b>InstaPay</b><small>From Egypt</small></div><button class="btn" data-support="instapay">InstaPay</button></div>
+            <div class="row"><div class="txt"><b>Star on GitHub</b><small>Free, and it helps others find Nova</small></div><button class="btn" data-support="github">⭐ Star</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MORE BY NOVA -->
+      <section id="more" class="page">
+        <h1>More by Nova</h1>
+        <p class="lead">Other apps from the Nova team. Free and open source, like Nova Island.</p>
+        <div class="group">
+          <div class="card">
+            <div class="row app">
+              <img class="app-ico" src="apps/qr-nova.png" alt="">
+              <div class="txt">
+                <b>QR Nova</b>
+                <small>Beautiful QR codes, in seconds. Links, PDFs, Wi-Fi, contacts and more.</small>
+                <div class="app-foot">
+                  <span class="app-tags"><i>Free</i><i>Open source</i><i>Windows</i></span>
+                  <span class="btns">
+                    <button class="btn" data-support="qrnova-src">GitHub</button>
+                    <button class="btn accent" data-support="qrnova">Download</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="hint">More apps are on the way.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="saved" id="saved" role="status">Saved</div>
+  <script src="prefs.js"></script>
+</body>
+</html>

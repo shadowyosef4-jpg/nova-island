@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>Nova character concept</title>
+  <style>
+    @font-face { font-family: "Plex Arabic"; font-weight: 600; src: url("../assets/plex-arabic-600.woff2") format("woff2"); }
+    @font-face { font-family: "Plex Arabic"; font-weight: 400; src: url("../assets/plex-arabic-400.woff2") format("woff2"); }
+    @font-face { font-family: "Nova Quran"; src: url("../../../fonts/Elgharib-KFGQPCHafsV3-Taweel.ttf") format("truetype"); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1600px; height: 900px; overflow: hidden; background:
+      radial-gradient(40% 50% at 15% 20%, rgba(124, 58, 237, .45), transparent 70%),
+      radial-gradient(40% 50% at 85% 80%, rgba(59, 130, 246, .4), transparent 70%),
+      linear-gradient(160deg, #110d26, #0b1128 60%, #09091a); color: #fff; font-family: "Plex Arabic", "Segoe UI", sans-serif; }
+    h1 { position: absolute; top: 34px; right: 60px; margin: 0; font-size: 40px; font-weight: 600; direction: rtl; }
+    h1 small { display: block; font-size: 19px; font-weight: 400; color: rgba(255,255,255,.65); margin-top: 6px; }
+    .grid { position: absolute; top: 170px; left: 60px; right: 60px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 40px; }
+    .cell { position: relative; height: 320px; border-radius: 28px; background: rgba(255,255,255,.04); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); overflow: hidden; }
+    .cap { position: absolute; bottom: 18px; right: 26px; left: 26px; direction: rtl; font-size: 19px; color: rgba(255,255,255,.85); }
+    .cap b { color: #ffd479; }
+    .num { position: absolute; top: 16px; left: 22px; font: 600 22px "Segoe UI"; color: #ffd479; }
+
+    /* the island pill (as in the app) */
+    .pill { position: absolute; height: 46px; border-radius: 23px; background: rgba(16, 16, 24, .86);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), 0 14px 30px -10px rgba(0,0,0,.6); display: flex; align-items: center;
+      justify-content: space-between; padding: 0 20px; font: 600 18px "Segoe UI"; }
+    .pill span { font-weight: 400; color: rgba(255,255,255,.65); font-size: 16px; }
+    .card { position: absolute; border-radius: 34px; background: rgba(16, 16, 24, .9); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), 0 20px 50px -14px rgba(0,0,0,.7);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; direction: rtl; }
+    .card .t { font-family: "Nova Quran", serif; font-size: 34px; text-shadow: 0 0 16px rgba(255,212,121,.45); }
+    .card .s { font-size: 17px; color: rgba(255,255,255,.7); }
+    .card .s b { color: #ffd479; }
+    svg.nova { position: absolute; overflow: visible; }
+  </style>
+</head>
+<body>
+  <h1>«نوفا» — شخصية تعيش على حافة الجزيرة<small>صغيرة بحجم الجزيرة، زجاجية بألوانها، بنفس العينين (الوجه ١)</small></h1>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#8b7bff"/><stop offset=".55" stop-color="#5b6cff"/><stop offset="1" stop-color="#3b82f6"/>
+      </linearGradient>
+      <radialGradient id="shine" cx=".32" cy=".25" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <!-- Nova's head/body (one soft rounded shape) with the face -->
+      <g id="novaBody">
+        <rect x="-30" y="-34" width="60" height="62" rx="26" fill="url(#body)"/>
+        <rect x="-30" y="-34" width="60" height="62" rx="26" fill="url(#shine)"/>
+        <rect x="-30" y="-34" width="60" height="62" rx="26" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
+        <!-- eyes (face 1) -->
+        <rect x="-15" y="-16" width="10" height="14" rx="5" fill="#fff"/>
+        <rect x="5" y="-16" width="10" height="14" rx="5" fill="#fff"/>
+        <circle cx="-9" cy="-8" r="3.2" fill="#0b0b12"/>
+        <circle cx="11" cy="-8" r="3.2" fill="#0b0b12"/>
+        <!-- small smile + cheeks -->
+        <path d="M-6 6 Q0 10 6 6" fill="none" stroke="#0b0b12" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="-19" cy="4" r="3.5" fill="#ff8fb8" opacity=".55"/>
+        <circle cx="19" cy="4" r="3.5" fill="#ff8fb8" opacity=".55"/>
+      </g>
+      <g id="foot"><ellipse cx="0" cy="0" rx="8" ry="5" fill="#4c5dff"/><ellipse cx="0" cy="-1" rx="8" ry="5" fill="none" stroke="#fff" stroke-opacity=".3"/></g>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <!-- 1: sitting on the edge, legs dangling -->
+    <div class="cell">
+      <span class="num">1</span>
+      <div class="pill" style="left:150px; top:120px; width:420px">10:24 AM <span>Thu, Oct 29</span></div>
+      <svg class="nova" style="left:568px; top:52px" width="1" height="1">
+        <g transform="translate(0,40)">
+          <!-- legs over the edge -->
+          <path d="M-10 26 L-14 52" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M10 26 L16 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#foot" transform="translate(-15,55) rotate(-12)"/>
+          <use href="#foot" transform="translate(18,53) rotate(14)"/>
+          <!-- arms resting on the pill -->
+          <path d="M-28 4 Q-40 14 -38 26" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M28 4 Q40 14 38 26" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#novaBody"/>
+        </g>
+      </svg>
+      <div class="cap">في الهدوء: <b>تجلس على حافة الجزيرة</b> وقدماها تتأرجحان، وعيناها تتبعان المؤشر.</div>
+    </div>
+
+    <!-- 2: waving -->
+    <div class="cell">
+      <span class="num">2</span>
+      <div class="pill" style="left:120px; top:120px; width:440px">أهلًا بعودتك 👋 <span>غبت 25 دقيقة</span></div>
+      <svg class="nova" style="left:620px; top:120px" width="1" height="1">
+        <g>
+          <path d="M-9 26 L-11 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M9 26 L11 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#foot" transform="translate(-13,53)"/>
+          <use href="#foot" transform="translate(13,53)"/>
+          <path d="M-28 6 Q-40 18 -36 30" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <!-- waving arm -->
+          <path d="M28 0 Q44 -10 46 -32" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="46" cy="-36" r="6" fill="#8b9bff"/>
+          <path d="M56 -46 q6 4 4 10 M62 -40 q5 3 3 8" fill="none" stroke="#ffd479" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+          <use href="#novaBody"/>
+        </g>
+      </svg>
+      <div class="cap">حين تعود: <b>تقف وتلوّح لك</b> بجانب بطاقة «أهلًا بعودتك».</div>
+    </div>
+
+    <!-- 3: holding a sign -->
+    <div class="cell">
+      <span class="num">3</span>
+      <div class="pill" style="left:110px; top:110px; width:430px">✅ اكتمل التحميل <span>Golden Hour.mp4</span></div>
+      <svg class="nova" style="left:620px; top:150px" width="1" height="1">
+        <g>
+          <path d="M-9 26 L-11 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M9 26 L11 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#foot" transform="translate(-13,53)"/>
+          <use href="#foot" transform="translate(13,53)"/>
+          <!-- sign on a stick -->
+          <path d="M-40 -60 L-40 20" stroke="#c9a46a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="-82" y="-92" width="84" height="40" rx="9" fill="#fff"/>
+          <text x="-40" y="-65" text-anchor="middle" font-family="Segoe UI" font-weight="700" font-size="17" fill="#15803d">Done ✓</text>
+          <path d="M-28 4 Q-38 10 -40 2" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M28 6 Q40 18 36 30" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#novaBody"/>
+        </g>
+      </svg>
+      <div class="cap">مع الأخبار الجيدة: <b>ترفع لافتة صغيرة</b> وتطلق الشرارات.</div>
+    </div>
+
+    <!-- 4: prayer: holding a lantern beside the card -->
+    <div class="cell">
+      <span class="num">4</span>
+      <div class="card" style="left:70px; top:44px; width:470px; height:190px">
+        <span class="t">أَقِمْ صَلَاتَكَ</span>
+        <span class="s">حان الآن وقت صلاة <b>العصر</b> · <bdi dir="ltr">3:49 PM</bdi></span>
+      </div>
+      <svg class="nova" style="left:620px; top:150px" width="1" height="1">
+        <g>
+          <path d="M-9 26 L-11 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M9 26 L11 50" stroke="#4c5dff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#foot" transform="translate(-13,53)"/>
+          <use href="#foot" transform="translate(13,53)"/>
+          <!-- lantern (fanous) with a warm glow -->
+          <circle cx="-48" cy="-6" r="34" fill="#ffd479" opacity=".18"/>
+          <path d="M-48 -40 L-48 -30" stroke="#c9a46a" stroke-width="2"/>
+          <path d="M-58 -30 h20 l4 8 v22 l-4 8 h-20 l-4 -8 v-22 z" fill="#2a1f0f" stroke="#e8b85c" stroke-width="2"/>
+          <rect x="-54" y="-20" width="12" height="20" rx="3" fill="#ffd479"/>
+          <path d="M-28 4 Q-38 -2 -40 -14" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M28 6 Q40 18 36 30" fill="none" stroke="#6c7bff" stroke-width="5" stroke-linecap="round"/>
+          <use href="#novaBody"/>
+        </g>
+      </svg>
+      <div class="cap">عند الأذان: <b>تحمل فانوسًا</b> بجانب بطاقة «أقم صلاتك».</div>
+    </div>
+  </div>
+</body>
+</html>

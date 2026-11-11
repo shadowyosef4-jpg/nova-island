@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../promo.css">
+  <style>
+    .copy { left: 90px; top: 380px; width: 660px; }
+    .copy h1 { font-size: 66px; }
+    .window.idm { left: 790px; top: 330px; width: 1060px; height: 640px; background: #0d0d10; font-family: var(--ui); }
+    .idm .top { height: 54px; display: flex; align-items: center; gap: 12px; padding: 0 20px; border-bottom: 1px solid rgba(255, 255, 255, .06); }
+    .idm .top .logo { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, #22d3ee, #2563eb); }
+    .idm .top b { font-size: 15px; }
+    .idm .top .speed { margin-left: auto; height: 30px; padding: 0 14px; border-radius: 15px; background: rgba(255, 255, 255, .06); display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .idm .top .speed i { width: 7px; height: 7px; border-radius: 50%; background: #30d158; }
+    .idm .body { padding: 26px 30px; }
+    .idm h3 { margin: 0; font-size: 30px; font-weight: 700; }
+    .idm .lead { color: var(--txt-3); font-size: 14px; margin: 6px 0 20px; }
+    .idm .paste { height: 50px; border-radius: 12px; background: rgba(255, 255, 255, .04); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08); display: flex; align-items: center; padding: 0 8px 0 18px; color: var(--txt-3); font-size: 14px; }
+    .idm .paste span { margin-left: auto; height: 36px; padding: 0 18px; border-radius: 9px; background: #e8e8ee; color: #111; display: flex; align-items: center; font-weight: 600; }
+    .idm .row { display: flex; align-items: center; gap: 16px; margin-top: 14px; padding: 14px 16px; border-radius: 14px; background: rgba(255, 255, 255, .035); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); }
+    .idm .row .th { width: 54px; height: 54px; border-radius: 10px; flex: none; background: var(--g) center / cover; }
+    .idm .row .mid { flex: 1; min-width: 0; }
+    .idm .row .nm { font-size: 15px; font-weight: 600; }
+    .idm .row .mt { font-size: 12.5px; color: var(--txt-3); margin: 5px 0 8px; font-family: Consolas, monospace; }
+    .idm .row .pb { height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .1); }
+    .idm .row .pb b { display: block; height: 100%; border-radius: 2px; background: #e8e8ee; width: var(--p); }
+    .idm .row .pc { font-size: 15px; font-weight: 700; width: 52px; text-align: right; }
+  </style>
+</head>
+<body>
+  <div class="wall wall-ocean"></div>
+
+  <div class="window idm">
+    <div class="top"><span class="logo"></span><b>IDM Nova</b><span class="speed"><i></i>19.8 MB/s</span></div>
+    <div class="body">
+      <h3>Download anything</h3>
+      <div class="lead">Files, video and audio — fast, resumable, in the quality you choose.</div>
+      <div class="paste">Paste a link…<span>Download →</span></div>
+      <div class="row"><span class="th" style="--g:url('../assets/video.jpg')"></span><div class="mid"><div class="nm">Golden Hour — Live at the Lake (4K).mp4</div><div class="mt">712 MB of 1.1 GB · 8.6 MB/s · 51s left</div><div class="pb" style="--p:62%"><b></b></div></div><span class="pc">62%</span></div>
+      <div class="row"><span class="th" style="--g:linear-gradient(135deg,#f59e0b,#b45309)"></span><div class="mid"><div class="nm">Linux-Workstation-24.04.iso</div><div class="mt">1.6 GB of 5.8 GB · 11.2 MB/s · 6:13 left</div><div class="pb" style="--p:28%"><b></b></div></div><span class="pc">28%</span></div>
+      <div class="row"><span class="th" style="--g:url('../assets/cover.png')"></span><div class="mid"><div class="nm">Nova Sessions — Golden Hour.mp3</div><div class="mt">9.4 MB · Done</div><div class="pb" style="--p:100%"><b></b></div></div><span class="pc">✓</span></div>
+    </div>
+  </div>
+
+  <!--ISLANDS-->
+
+  <div class="copy">
+    <div class="brand"><span class="mark"><i></i></span>Nova Island × IDM Nova</div>
+    <h1>Downloads,<br><span class="hl">at a glance</span></h1>
+    <p>Progress, speed and time left while you work, and a full list to pause, resume or open a file in one click.</p>
+  </div>
+  <script src="../mock.js"></script>
+  <script src="../scene.js"></script>
+</body>
+</html>

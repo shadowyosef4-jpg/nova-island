@@ -1,0 +1,109 @@
+const { contextBridge, ipcRenderer, webUtils } = require('electron');
+
+const on = (channel) => (cb) => ipcRenderer.on(channel, (_e, data) => cb(data));
+
+contextBridge.exposeInMainWorld('nova', {
+  onMedia: on('media'),
+  onToggle: on('toggle'),
+  setPinned: (v) => ipcRenderer.send('pinned', !!v),
+  setClickable: (v) => ipcRenderer.send('clickable', !!v),
+  onHover: on('hover'),
+  onBackdrop: on('backdrop'),
+  onStats: on('stats'),
+  onClipboard: on('clipboard'),
+  onWeather: on('weather'),
+  onApps: on('apps'),
+  onShelf: on('shelf'),
+  onAnchor: on('anchor'),
+  onPrayer: on('prayer'),
+  prayerSnapshot: () => ipcRenderer.invoke('prayer-snapshot'),
+  onDownloads: on('downloads'),
+  onDownloadThumb: on('dl-thumb'),
+  onFeatures: on('features'),
+  features: () => ipcRenderer.invoke('island-features'),
+  onSaver: on('saver'),
+  onRecording: on('recording'),
+  setFeatures: (patch) => ipcRenderer.send('features-set', patch),
+  openSettings: () => ipcRenderer.send('open-settings'),
+  ready: () => ipcRenderer.send('island-ready'),
+  onReminderNow: on('reminder-now'),
+  onVisibility: on('visibility'),
+  onPrivacy: on('privacy'),
+  onCalendar: on('calendar'),
+  onScreenshot: on('screenshot'),
+  onNetwork: on('network'),
+  onClipSmart: on('clip-smart'),
+  onNear: on('near'),
+  clipAction: (action) => ipcRenderer.send('clip-action', action),
+  network: () => ipcRenderer.invoke('net-get'),
+  onShotSaved: on('shot-saved'),
+  shotToShelf: () => ipcRenderer.send('shot-to-shelf'),
+  onUpdate: on('update'),
+  onNews: on('news'),
+  newsShown: (id) => ipcRenderer.send('news-shown', id),
+  newsDismiss: (id) => ipcRenderer.send('news-dismiss', id),
+  newsOpen: (id) => ipcRenderer.send('news-open', id),
+  newsRead: (ids) => ipcRenderer.send('news-read', ids),
+  onPlugins: on('plugins'),
+  onPluginProgress: on('plugin-progress'),
+  plugins: () => ipcRenderer.invoke('plugins-active'),
+  pluginSet: (id, key, value) => ipcRenderer.send('plugin-setting', id, key, value),
+  installUpdate: () => ipcRenderer.send('update-install'),
+  calendar: () => ipcRenderer.invoke('cal-get'),
+  openMeeting: (link) => ipcRenderer.send('open-meeting', link),
+  downloads: {
+    snapshot: () => ipcRenderer.invoke('dl-snapshot'),
+    control: (id, action) => ipcRenderer.send('dl-control', id, action),
+  },
+  dragStart: () => ipcRenderer.send('drag-start'),
+  dragEnd: () => ipcRenderer.send('drag-end'),
+
+  setRect: (r) => ipcRenderer.send('island-rect', r),
+  mediaCmd: (cmd) => ipcRenderer.send('media-cmd', cmd),
+  focusInput: (v) => ipcRenderer.send('focus-input', v),
+  contextMenu: () => ipcRenderer.send('context-menu'),
+  miniOpen: (req) => ipcRenderer.invoke('mini-open', req),
+
+  apps: {
+    list: () => ipcRenderer.invoke('apps-list'),
+    all: () => ipcRenderer.invoke('apps-all'),
+    add: (id) => ipcRenderer.send('apps-add', id),
+    remove: (id) => ipcRenderer.send('apps-remove', id),
+    launch: (id, fresh) => ipcRenderer.send('apps-launch', id, !!fresh),
+    running: () => ipcRenderer.invoke('apps-running'),
+    reorder: (ids) => ipcRenderer.send('apps-reorder', ids),
+  },
+
+  shelf: {
+    list: () => ipcRenderer.invoke('shelf-list'),
+    // takes an array of File (a FileList doesn't survive the context bridge); returns how many had a path
+    addFiles: (files) => {
+      const paths = Array.from(files || []).map((f) => {
+        try { return webUtils.getPathForFile(f); } catch { return ''; }
+      }).filter(Boolean);
+      if (paths.length) ipcRenderer.send('shelf-add', paths);
+      return paths.length;
+    },
+    remove: (p) => ipcRenderer.send('shelf-remove', p),
+    clear: () => ipcRenderer.send('shelf-clear'),
+    open: (p) => ipcRenderer.send('shelf-open', p),
+    reveal: (p) => ipcRenderer.send('shelf-reveal', p),
+    startDrag: (p) => ipcRenderer.send('shelf-drag', p),
+  },
+
+  system: {
+    snapshot: () => ipcRenderer.invoke('system-snapshot'),
+    copyClip: (i) => ipcRenderer.send('clip-copy', i),
+    clearClips: () => ipcRenderer.send('clip-clear'),
+  },
+
+  share: {
+    status: () => ipcRenderer.invoke('share-status'),
+    startWeb: () => ipcRenderer.invoke('share-web-start'),
+    stopWeb: () => ipcRenderer.invoke('share-web-stop'),
+    startFtp: () => ipcRenderer.invoke('share-ftp-start'),
+    stopFtp: () => ipcRenderer.invoke('share-ftp-stop'),
+    openFolder: () => ipcRenderer.send('share-open-folder'),
+    onStatus: on('share-status'),
+  },
+});

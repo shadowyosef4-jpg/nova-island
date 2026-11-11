@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>Nova outfits</title>
+  <style>
+    @font-face { font-family: "Plex Arabic"; font-weight: 600; src: url("../assets/plex-arabic-600.woff2") format("woff2"); }
+    @font-face { font-family: "Plex Arabic"; font-weight: 400; src: url("../assets/plex-arabic-400.woff2") format("woff2"); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1600px; height: 1180px; overflow: hidden; color: #fff; font-family: "Plex Arabic", "Segoe UI", sans-serif;
+      background: radial-gradient(40% 40% at 12% 12%, rgba(124, 58, 237, .4), transparent 70%),
+                  radial-gradient(40% 40% at 88% 88%, rgba(59, 130, 246, .38), transparent 70%),
+                  linear-gradient(160deg, #110d26, #0b1128 60%, #09091a); }
+    h1 { position: absolute; top: 26px; right: 50px; margin: 0; font-size: 38px; font-weight: 600; direction: rtl; }
+    h1 small { display: block; font-size: 18px; font-weight: 400; color: rgba(255,255,255,.65); margin-top: 4px; }
+    .grid { position: absolute; top: 130px; left: 40px; right: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; direction: rtl; }
+    .cell { position: relative; height: 330px; border-radius: 24px; background: rgba(255,255,255,.045); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); overflow: hidden; }
+    .cell svg { direction: ltr; position: absolute; left: 50%; top: 43%; transform: translate(-50%, -50%); overflow: visible; }
+    .name { position: absolute; bottom: 44px; left: 0; right: 0; text-align: center; font-size: 22px; font-weight: 600; }
+    .when { position: absolute; bottom: 16px; left: 12px; right: 12px; text-align: center; font-size: 14px; color: rgba(255,255,255,.6); }
+    .num { position: absolute; top: 12px; right: 18px; font: 600 20px "Segoe UI"; color: #ffd479; }
+  </style>
+</head>
+<body>
+  <h1>نوفا بأشكال مختلفة<small>كل شكل يظهر مع لحظته في الجزيرة — نفس العينين (الوجه ١) دائمًا</small></h1>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="gV" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b7bff"/><stop offset=".55" stop-color="#5b6cff"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+      <radialGradient id="shine" cx=".32" cy=".25" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="lamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3c4"/><stop offset=".6" stop-color="#ffd479"/><stop offset="1" stop-color="#f5a623"/></radialGradient>
+      <linearGradient id="rug" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b1c3a"/><stop offset="1" stop-color="#6d1028"/></linearGradient>
+      <!-- body with face 1 (no arms) -->
+      <g id="body">
+        <rect x="-32" y="-36" width="64" height="66" rx="28" fill="url(#gV)"/>
+        <rect x="-32" y="-36" width="64" height="66" rx="28" fill="url(#shine)"/>
+        <rect x="-15" y="-16" width="10" height="14" rx="5" fill="#fff"/><rect x="5" y="-16" width="10" height="14" rx="5" fill="#fff"/>
+        <circle cx="-9" cy="-8" r="3.2" fill="#0b0b12"/><circle cx="11" cy="-8" r="3.2" fill="#0b0b12"/>
+        <path d="M-5 5 Q0 8.5 5 5" fill="none" stroke="#0b0b12" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="-21" cy="2" r="3.6" fill="#ff8fb8" opacity=".55"/><circle cx="21" cy="2" r="3.6" fill="#ff8fb8" opacity=".55"/>
+      </g>
+      <g id="legs">
+        <path d="M-10 26 L-12 50 M10 26 L12 50" stroke="#4c5dff" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="-14" cy="53" rx="9" ry="5.5" fill="#4c5dff"/><ellipse cx="14" cy="53" rx="9" ry="5.5" fill="#4c5dff"/>
+      </g>
+      <g id="floor"><ellipse cx="0" cy="62" rx="52" ry="7" fill="#000" opacity=".35"/></g>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <!-- 1 prayer: taqiyah + prayer rug, hands folded -->
+    <div class="cell"><span class="num">1</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <!-- prayer rug in perspective with a mihrab arch at the far end -->
+        <path d="M-58 72 L58 72 L44 34 L-44 34 Z" fill="url(#rug)"/>
+        <path d="M-50 67 L50 67 L39 38 L-39 38 Z" fill="none" stroke="#e8b85c" stroke-width="2"/>
+        <path d="M-22 38 Q0 22 22 38" fill="none" stroke="#e8b85c" stroke-width="2"/>
+        <path d="M-58 72 l-3 5 M-46 72 l-2 5 M-34 72 l-1 5 M-22 72 v5 M-10 72 v5 M2 72 v5 M14 72 v5 M26 72 l1 5 M38 72 l2 5 M50 72 l3 5" stroke="#e8b85c" stroke-width="1.5"/>
+        <g transform="translate(0,-4)">
+          <use href="#legs"/>
+          <!-- hands folded on the chest -->
+          <path d="M-30 6 Q-22 18 -6 16 M30 6 Q22 18 6 16" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+          <use href="#body"/>
+          <!-- white prayer cap (taqiyah) -->
+          <path d="M-27 -30 Q-27 -50 0 -50 Q27 -50 27 -30 Z" fill="#fafafa"/>
+          <path d="M-27 -30 L27 -30" stroke="#d9d9e3" stroke-width="3"/>
+          <path d="M-18 -42 h36 M-22 -36 h44" stroke="#e4e4ee" stroke-width="1.2" stroke-dasharray="3 3"/>
+        </g>
+      </svg>
+      <div class="name">وقت الصلاة</div><div class="when">طاقية بيضاء وسجادة — مع «أقم صلاتك»</div>
+    </div>
+
+    <!-- 2 ramadan: lantern + crescent garland -->
+    <div class="cell"><span class="num">2</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <path d="M-100 -86 Q0 -56 100 -86" fill="none" stroke="#c9a46a" stroke-width="1.5"/>
+        <g fill="#ffd479"><path d="M-62 -74 a7 7 0 1 0 6 10 a5.5 5.5 0 1 1 -6 -10z"/><path d="M58 -74 a7 7 0 1 0 6 10 a5.5 5.5 0 1 1 -6 -10z"/></g>
+        <g fill="#ff8a5c"><circle cx="-30" cy="-66" r="4"/><circle cx="0" cy="-62" r="4"/><circle cx="30" cy="-66" r="4"/></g>
+        <use href="#floor"/><use href="#legs"/>
+        <circle cx="-52" cy="10" r="30" fill="#ffd479" opacity=".18"/>
+        <path d="M-52 -18 L-52 -10" stroke="#c9a46a" stroke-width="2"/>
+        <path d="M-60 -10 h16 l4 7 v18 l-4 7 h-16 l-4 -7 v-18 z" fill="url(#lamp)" stroke="#e8b85c" stroke-width="2"/>
+        <path d="M-30 6 Q-42 0 -46 -12" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <path d="M30 6 Q42 18 38 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+      </svg>
+      <div class="name">رمضان</div><div class="when">تحمل فانوسًا — عدّ الإفطار والإمساك</div>
+    </div>
+
+    <!-- 3 reading Quran on a rahl -->
+    <div class="cell"><span class="num">3</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <use href="#body"/>
+        <!-- rahl (X stand) with an open mushaf, in front of the body -->
+        <path d="M-26 58 L18 18 M26 58 L-18 18" stroke="#8a5a1a" stroke-width="5" stroke-linecap="round"/>
+        <path d="M-34 22 Q-17 12 0 20 Q17 12 34 22 L32 30 Q16 22 0 30 Q-16 22 -32 30 Z" fill="#0f5132" stroke="#e8b85c" stroke-width="1.5"/>
+        <path d="M-30 20 Q-15 11 0 18 Q15 11 30 20 L29 25 Q15 17 0 24 Q-15 17 -29 25 Z" fill="#fdf6e3"/>
+        <path d="M-24 18 h18 M-24 21 h16 M6 18 h18 M8 21 h16" stroke="#9a8b6a" stroke-width=".9"/>
+        <path d="M-30 6 Q-38 16 -30 22 M30 6 Q38 16 30 22" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="name">آية</div><div class="when">تقرأ من مصحف على حامل — تذكير الآيات</div>
+    </div>
+
+    <!-- 4 tasbih -->
+    <div class="cell"><span class="num">4</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 6 Q-42 16 -38 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <path d="M30 6 Q44 8 48 -4" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+        <!-- prayer beads hanging from the hand -->
+        <g fill="#30d158">
+          <circle cx="50" cy="0" r="3.2"/><circle cx="53" cy="7" r="3.2"/><circle cx="54" cy="14" r="3.2"/><circle cx="53" cy="21" r="3.2"/>
+          <circle cx="48" cy="27" r="3.2"/><circle cx="42" cy="30" r="3.2"/><circle cx="36" cy="28" r="3.2"/><circle cx="33" cy="22" r="3.2"/>
+        </g>
+        <path d="M50 30 l-3 10 h6 z" fill="#ffd479"/>
+      </svg>
+      <div class="name">ذِكر</div><div class="when">تمسك مسبحة — الأذكار والعدّاد</div>
+    </div>
+
+    <!-- 5 music: headphones + notes -->
+    <div class="cell"><span class="num">5</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 6 Q-42 16 -38 30 M30 6 Q42 16 38 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+        <path d="M-30 -12 Q-30 -54 0 -54 Q30 -54 30 -12" fill="none" stroke="#1f1f2b" stroke-width="6" stroke-linecap="round"/>
+        <rect x="-40" y="-18" width="14" height="22" rx="6" fill="#ff5c8a"/><rect x="26" y="-18" width="14" height="22" rx="6" fill="#ff5c8a"/>
+        <g fill="#ffd479"><path d="M50 -46 v16 a5 4 0 1 1 -3 -3.5 v-10 l10 -3 v10 a5 4 0 1 1 -3 -3.5 v-8.5 z"/><path d="M-58 -36 v12 a4 3.5 0 1 1 -2.5 -3 v-9 z"/></g>
+      </svg>
+      <div class="name">الموسيقى</div><div class="when">سماعات ونوتات — أثناء التشغيل</div>
+    </div>
+
+    <!-- 6 download: delivered box -->
+    <div class="cell"><span class="num">6</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <use href="#body"/>
+        <rect x="-26" y="8" width="52" height="38" rx="4" fill="#c9915a"/>
+        <path d="M-26 18 h52" stroke="#a87442" stroke-width="2"/><path d="M-6 8 v10 h12 v-10" fill="#e8c99a"/>
+        <path d="M0 24 v12 M-5 31 l5 5 5 -5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M-30 6 Q-36 16 -26 22 M30 6 Q36 16 26 22" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="34" cy="-40" r="11" fill="#30d158"/><path d="M29 -40 l4 4 7 -8" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="name">اكتمل التحميل</div><div class="when">تحمل صندوقًا وصل — مع IDM Nova</div>
+    </div>
+
+    <!-- 7 focus: laptop -->
+    <div class="cell"><span class="num">7</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <use href="#body"/>
+        <path d="M-34 44 L34 44 L28 50 L-28 50 Z" fill="#94a3b8"/>
+        <path d="M-26 16 L26 16 L30 44 L-30 44 Z" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+        <rect x="-20" y="22" width="40" height="16" rx="2" fill="#ff6b6b" opacity=".35"/>
+        <text x="0" y="35" text-anchor="middle" font-family="Segoe UI" font-weight="700" font-size="11" fill="#ffb3b3">24:58</text>
+        <path d="M-30 6 Q-38 18 -26 40 M30 6 Q38 18 26 40" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <path d="M-30 -30 Q0 -44 30 -30" fill="none" stroke="#ff6b6b" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="name">تركيز</div><div class="when">عصابة وحاسوب صغير — جلسة التركيز</div>
+    </div>
+
+    <!-- 8 break: tea cup -->
+    <div class="cell"><span class="num">8</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 6 Q-42 16 -38 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+        <path d="M30 6 Q40 16 32 24" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <path d="M24 14 h22 v14 a11 9 0 0 1 -22 0 z" fill="#fff"/>
+        <path d="M46 17 a6 6 0 0 1 0 10" fill="none" stroke="#fff" stroke-width="3"/>
+        <path d="M24 16 h22" stroke="#86efac" stroke-width="3"/>
+        <path d="M30 6 q-4 -6 0 -12 M37 4 q-4 -6 0 -12" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="name">استراحة</div><div class="when">كوب شاي — تذكير الاستراحة</div>
+    </div>
+
+    <!-- 9 morning: stretching with the sun -->
+    <div class="cell"><span class="num">9</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <circle cx="0" cy="-8" r="62" fill="#ffd479" opacity=".16"/>
+        <g stroke="#ffd479" stroke-width="3" stroke-linecap="round" opacity=".8">
+          <path d="M0 -92 v12 M-58 -68 l8 8 M58 -68 l-8 8 M-82 -14 h12 M82 -14 h-12"/>
+        </g>
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 0 Q-42 -20 -36 -44 M30 0 Q42 -20 36 -44" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="-36" cy="-47" r="5" fill="#8b9bff"/><circle cx="36" cy="-47" r="5" fill="#8b9bff"/>
+        <use href="#body"/>
+      </svg>
+      <div class="name">صباح الخير</div><div class="when">تتمطّى مع الشمس — تحية الصباح</div>
+    </div>
+
+    <!-- 10 rain: umbrella -->
+    <div class="cell"><span class="num">10</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <g stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" opacity=".7">
+          <path d="M-80 -70 l-4 10 M-50 -88 l-4 10 M60 -84 l-4 10 M86 -60 l-4 10 M-90 -20 l-4 10 M90 -10 l-4 10"/>
+        </g>
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 6 Q-42 16 -38 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+        <path d="M24 -2 L24 -58" stroke="#475569" stroke-width="3"/>
+        <path d="M-34 -58 Q-34 -92 24 -94 Q82 -92 82 -58 Q68 -66 53 -58 Q38 -66 24 -58 Q10 -66 -5 -58 Q-20 -66 -34 -58 Z" fill="#38bdf8"/>
+        <path d="M30 6 Q36 2 26 -4" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="name">مطر</div><div class="when">مظلة — «مطر بعد ٣٠ دقيقة»</div>
+    </div>
+
+    <!-- 11 celebrate: party hat + confetti -->
+    <div class="cell"><span class="num">11</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <g><rect x="-74" y="-70" width="6" height="10" rx="2" fill="#ff5c8a" transform="rotate(20 -71 -65)"/><rect x="66" y="-56" width="6" height="10" rx="2" fill="#30d158" transform="rotate(-25 69 -51)"/>
+          <rect x="-60" y="-20" width="6" height="10" rx="2" fill="#ffd479" transform="rotate(40 -57 -15)"/><rect x="70" y="0" width="6" height="10" rx="2" fill="#8ab4ff" transform="rotate(15 73 5)"/>
+          <circle cx="-40" cy="-86" r="3.5" fill="#8ab4ff"/><circle cx="48" cy="-90" r="3.5" fill="#ff8a5c"/><circle cx="-84" cy="20" r="3.5" fill="#30d158"/></g>
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 4 Q-46 -6 -48 -24 M30 4 Q46 -6 48 -24" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+        <path d="M-14 -34 L4 -82 L20 -34 Z" fill="#ff5c8a"/>
+        <path d="M-9 -46 L15 -46 M-4 -60 L10 -60" stroke="#ffd479" stroke-width="4"/>
+        <circle cx="4" cy="-84" r="6" fill="#ffd479"/>
+      </svg>
+      <div class="name">أخبار جيدة</div><div class="when">قبعة احتفال وقصاصات — مع الشرارات</div>
+    </div>
+
+    <!-- 12 network: holding wifi signal -->
+    <div class="cell"><span class="num">12</span>
+      <svg width="220" height="220" viewBox="-110 -100 220 220">
+        <use href="#floor"/><use href="#legs"/>
+        <path d="M-30 6 Q-42 16 -38 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <use href="#body"/>
+        <path d="M30 4 Q44 -4 46 -22" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <g fill="none" stroke="#30d158" stroke-width="4.5" stroke-linecap="round">
+          <path d="M30 -46 a22 22 0 0 1 32 0"/><path d="M36 -38 a13 13 0 0 1 20 0"/>
+        </g>
+        <circle cx="46" cy="-28" r="4.5" fill="#30d158"/>
+      </svg>
+      <div class="name">الشبكة</div><div class="when">ترفع إشارة Wi-Fi — «عاد الإنترنت»</div>
+    </div>
+  </div>
+</body>
+</html>

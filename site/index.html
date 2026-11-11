@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Island · A living island for your Windows desktop</title>
+  <meta name="description" content="Music, prayer times, downloads, your apps and messages in one glass island at the top of your Windows screen. Free, open source, under 1 MB.">
+  <meta name="theme-color" content="#07071a">
+  <meta property="og:title" content="Nova Island · A living island for your Windows desktop">
+  <meta property="og:description" content="Music, prayer times, downloads, apps and messages in one glass island. Free, open source, under 1 MB.">
+  <meta property="og:image" content="assets/01-hero.webp">
+  <link rel="icon" href="assets/logo-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css?v=1.8.0-4">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Nova Island, home"><span class="eyes eyes-sm" aria-hidden="true"><i><b></b></i><i><b></b></i></span>Nova Island</a>
+    <nav aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#themes">Themes</a>
+      <a href="#performance">Performance</a>
+      <a href="https://github.com/NOVA-TECH-KIT/nova-island" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn tg" href="https://t.me/nova4apps" target="_blank" rel="noopener" aria-label="Nova on Telegram" title="Nova on Telegram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 3.7 2.9 10.9c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.9.9.9.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.2-15c.3-1.3-.5-1.9-1.6-1.6Zm-11.9 11-.4 3.6-1.4-4.6L18 7.3l-8.5 7.4Z"/></svg>
+      </a>
+      <a class="btn btn-sm btn-coffee" href="#support"><span class="cup" aria-hidden="true">☕</span><span class="lbl">Support</span></a>
+      <a class="btn btn-sm btn-primary" href="#download">Download</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <span class="pill-tag reveal"><i></i><b data-version>Version 1.8.0</b> · Now lighter than ever</span>
+        <h1 class="reveal">The island your<br><span class="grad">Windows desktop</span><br>was missing.</h1>
+        <p class="lead reveal">Music, messages, prayer times, downloads and your apps, in one living glass island at the top of your screen. With Nova, a little companion who keeps you company.</p>
+        <div class="ctas reveal">
+          <a class="store-btn" data-store href="https://apps.microsoft.com/detail/9PHV3N1V2H7M" target="_blank" rel="noopener" aria-label="Get Nova Island from the Microsoft Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M2 2h9.5v9.5H2z"/><path fill="#7fba00" d="M12.5 2H22v9.5h-9.5z"/><path fill="#00a4ef" d="M2 12.5h9.5V22H2z"/><path fill="#ffb900" d="M12.5 12.5H22V22h-9.5z"/></svg>
+            <span><small>Get it from</small>Microsoft Store</span>
+          </a>
+          <a class="btn btn-lg btn-ghost" data-download href="https://github.com/NOVA-TECH-KIT/nova-island/releases/latest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span>Download <small data-size>· 0.9 MB</small></span>
+          </a>
+        </div>
+        <p class="fine reveal">Windows 10 &amp; 11 · Free and open source (GPL v3)<span data-dl-count hidden> · <b></b> downloads</span></p>
+      </div>
+
+      <div class="stage reveal" aria-label="Nova Island, changing between music, a message, prayer time and a download">
+        <div class="screen">
+          <div class="wall"></div>
+          <div class="nisland" id="hero-island" data-state="music">
+            <div class="tint"></div>
+            <!-- resting: clock, date, weather -->
+            <div class="nface f-idle">
+              <span class="side"><b class="strong">9:41 AM</b><span class="soft">Tue, Nov 4</span></span>
+              <span class="side"><svg class="wx" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 1 0 6.5 19z"/></svg><b class="strong">24°</b></span>
+            </div>
+            <!-- expanded: the Media tab -->
+            <div class="nface f-exp">
+              <div class="topbar">
+                <span class="chip"><i class="dot"></i>Nova Player</span>
+                <span class="seg">
+                  <span class="tab on"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Media</span></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M10 2h4"/></svg></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+                </span>
+                <span class="tr">
+                  <svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+                  <span class="time"><b>9:41 AM</b><small>Tue, Nov 4</small></span>
+                </span>
+              </div>
+              <div class="media">
+                <span class="art-wrap"><i class="art glow"></i><i class="art"></i></span>
+                <div class="m-body">
+                  <div class="m-head"><span class="m-text"><b>Golden Hour</b><small>Nova Sessions</small></span><span class="eq"><i></i><i></i><i></i><i></i><i></i></span></div>
+                  <div class="progress"><span>1:35</span><i><b></b></i><span>-1:56</span></div>
+                  <div class="controls">
+                    <span class="transport">
+                      <span class="ctl"><svg viewBox="0 0 24 24"><path d="M19 20 9 12l10-8zM5 19V5"/></svg></span>
+                      <span class="ctl play"><svg viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></svg></span>
+                      <span class="ctl"><svg viewBox="0 0 24 24"><path d="m5 4 10 8-10 8zM19 5v14"/></svg></span>
+                    </span>
+                    <span class="vol"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg><i><b></b></i><span>64%</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- toast: another app's notification -->
+            <div class="nface f-note">
+              <span class="side grow"><span class="appico" style="--c: 42, 171, 238"><svg viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/></svg></span><b class="strong ell">Sara: Are we still on for tonight?</b></span>
+              <span class="open">Open</span>
+            </div>
+            <!-- resting: the next prayer -->
+            <div class="nface f-prayer">
+              <span class="side"><svg class="moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><b class="strong">Asr</b><span class="soft">3:49 PM</span></span>
+              <span class="side"><span class="soft">in</span><b class="strong gold" id="cd">12:30</b></span>
+            </div>
+            <!-- compact: a download -->
+            <div class="nface f-dl">
+              <span class="side grow"><svg class="ring" viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><circle class="on" cx="18" cy="18" r="14"/></svg><span class="soft ell">Golden-Hour-4K.mp4</span></span>
+              <span class="side"><span class="soft">8.6 MB/s</span><b class="strong green">62%</b></span>
+            </div>
+          </div>
+          <div class="taskbar"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="states" role="tablist" aria-label="Island states">
+          <button role="tab" data-to="music">Music</button>
+          <button role="tab" data-to="note">Messages</button>
+          <button role="tab" data-to="prayer">Prayer</button>
+          <button role="tab" data-to="dl">Downloads</button>
+          <button role="tab" data-to="clock">Resting</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS WITH -->
+    <section class="marquee" aria-label="Works with">
+      <div class="track">
+        <span>Spotify</span><span>YouTube</span><span>VLC</span><span>WhatsApp</span><span>Telegram</span><span>Chrome</span><span>Edge</span><span>Brave</span><span>Apple Music</span><span>IDM</span><span>Outlook</span><span>Google Calendar</span>
+        <span aria-hidden="true">Spotify</span><span aria-hidden="true">YouTube</span><span aria-hidden="true">VLC</span><span aria-hidden="true">WhatsApp</span><span aria-hidden="true">Telegram</span><span aria-hidden="true">Chrome</span><span aria-hidden="true">Edge</span><span aria-hidden="true">Brave</span><span aria-hidden="true">Apple Music</span><span aria-hidden="true">IDM</span><span aria-hidden="true">Outlook</span><span aria-hidden="true">Google Calendar</span>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="head reveal">
+        <span class="eyebrow">Everything at a glance</span>
+        <h2>Small island. <span class="grad">Big day.</span></h2>
+        <p>It rests as a slim pill and opens when you need it. No windows to juggle, nothing to keep open.</p>
+      </div>
+
+      <article class="feat reveal">
+        <div class="txt">
+          <span class="ico-badge" style="--c: 244, 114, 182"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+          <h3>Your music, always in reach</h3>
+          <p>Spotify, YouTube in any browser, VLC and more. See what's playing, skip, seek and set the volume without leaving what you're doing.</p>
+          <ul><li>Cover art and live equalizer</li><li>Pop a YouTube video into a floating mini player</li><li>Volume and brightness right on the island</li></ul>
+        </div>
+        <figure class="shot tilt"><img src="assets/01-hero.webp" alt="Nova Island playing music, with cover art and controls" width="1600" height="900" loading="lazy"></figure>
+      </article>
+
+      <article class="feat flip reveal">
+        <div class="txt">
+          <span class="ico-badge" style="--c: 42, 171, 238"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <span class="badge-new">New in 1.8</span>
+          <h3>Your messages, on the island</h3>
+          <p>WhatsApp, Telegram and your other apps show up right at the top, each with its own icon and color. Long messages scroll so you can read them whole. Click one to open the app.</p>
+          <ul><li>Off until you turn it on</li><li>Nothing leaves your PC</li><li>Turn off Windows' banners to see each one once</li></ul>
+        </div>
+        <div class="demo notes-demo" aria-hidden="true">
+          <div class="island mini" id="note-island">
+            <div class="face show">
+              <span class="ico" style="--c: 42, 171, 238"><svg viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/></svg></span>
+              <span class="msg"><b>Sara</b> Are we still on for tonight?</span><span class="open">Open</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="feat reveal">
+        <div class="txt">
+          <span class="ico-badge" style="--c: 255, 212, 121"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+          <h3>Prayer times and Qur'an radio</h3>
+          <p>A countdown to the next prayer, a gentle heads-up before the adhan, and verses and adhkar through the day. Live Qur'an radio from Cairo, Saudi and 140+ reciters, or any surah from its first ayah.</p>
+          <ul><li>20 calculation methods, Hijri date</li><li>Reciters, live or surah by surah</li><li>Pauses itself at prayer time if you like</li></ul>
+        </div>
+        <figure class="shot tilt"><img src="assets/06-faith.webp" alt="A Qur'an verse reminder and the prayer times on the island" width="1600" height="900" loading="lazy"></figure>
+      </article>
+
+      <article class="feat flip reveal">
+        <div class="txt">
+          <span class="ico-badge" style="--c: 48, 209, 88"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+          <h3>Downloads you can watch</h3>
+          <p>Browser downloads and IDM Nova in one place: a progress ring, the speed and time left, even when the island is collapsed.</p>
+          <ul><li>Pause, resume and open from the island</li><li>A notice when each one is done</li></ul>
+        </div>
+        <figure class="shot tilt"><img src="assets/04-downloads.webp" alt="Downloads on the island with progress and speed" width="1600" height="900" loading="lazy"></figure>
+      </article>
+
+      <article class="feat reveal">
+        <div class="txt">
+          <span class="ico-badge" style="--c: 167, 139, 250"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>
+          <h3>It understands what you copy</h3>
+          <p>Copy a link, a sum or a color and the island offers the right next step. Your screenshots wait on the Shelf, ready to drag into any app.</p>
+          <ul><li>Smart clipboard and history</li><li>A Shelf for files, in and out by dragging</li><li>A dot when an app uses your mic or camera</li></ul>
+        </div>
+        <figure class="shot tilt"><img src="assets/05-smart.webp" alt="The smart clipboard showing a link, a sum, a color and a screenshot" width="1600" height="900" loading="lazy"></figure>
+      </article>
+
+      <article class="feat flip reveal">
+        <div class="txt">
+          <span class="ico-badge" style="--c: 96, 165, 250"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <h3>Lives with your browser</h3>
+          <p>Over a browser it takes the right third of the address bar, so it never covers your tabs. Prefer it to stay put? It lets clicks pass through to the tab under it.</p>
+          <ul><li>Up to 36 pinned apps, in pages</li><li>Open apps come first</li><li>Dock it on top, or vertical on either side</li></ul>
+        </div>
+        <figure class="shot tilt"><img src="assets/03-browser.webp" alt="Nova Island sitting in a browser's address bar" width="1600" height="900" loading="lazy"></figure>
+      </article>
+    </section>
+
+    <!-- NOVA -->
+    <section class="nova reveal" id="nova">
+      <div class="nova-card">
+        <div class="eyes" aria-hidden="true"><i><b></b></i><i><b></b></i></div>
+        <h2>Meet <span class="grad">Nova</span></h2>
+        <p>A little companion who looks your way when your cursor comes close, cheers you through focus sessions, reminds you to drink water and welcomes you back with what you missed.</p>
+        <p class="hint">Move your cursor around. Nova is watching.</p>
+      </div>
+    </section>
+
+    <!-- THEMES -->
+    <section class="themes" id="themes">
+      <div class="head reveal">
+        <span class="eyebrow">13 themes</span>
+        <h2>Make it <span class="grad">yours.</span></h2>
+        <p>Liquid glass, pure black, pine, sakura, pixel green and more. Some even give Nova little ears.</p>
+      </div>
+      <div class="theme-stage reveal">
+        <div class="island theme-island" id="theme-island" data-theme="original">
+          <div class="face show f-clock"><b class="t">9:41</b><span class="d">Tue, Nov 4</span><span class="w"><svg viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 1 0 6.5 19z"/></svg>24°</span></div>
+        </div>
+        <div class="swatches" role="radiogroup" aria-label="Theme">
+          <button role="radio" data-theme="original" aria-checked="true" style="--a:#6f8cff;--b:#a78bfa">Original</button>
+          <button role="radio" data-theme="bakka" style="--a:#0f5132;--b:#d4af37">Bakka</button>
+          <button role="radio" data-theme="outline" style="--a:#1e293b;--b:#e2e8f0">Outline</button>
+          <button role="radio" data-theme="midnight" style="--a:#000;--b:#333">Midnight</button>
+          <button role="radio" data-theme="forest" style="--a:#14532d;--b:#4ade80">Forest</button>
+          <button role="radio" data-theme="snow" style="--a:#e2e8f0;--b:#93c5fd">Snow</button>
+          <button role="radio" data-theme="cat" style="--a:#f59e0b;--b:#fde68a">Cat</button>
+          <button role="radio" data-theme="galaxy" style="--a:#3b0764;--b:#c084fc">Galaxy</button>
+          <button role="radio" data-theme="aurora" style="--a:#064e3b;--b:#22d3ee">Aurora</button>
+          <button role="radio" data-theme="ocean" style="--a:#0c4a6e;--b:#38bdf8">Ocean</button>
+          <button role="radio" data-theme="nody" style="--a:#9d174d;--b:#f9a8d4">Nody</button>
+          <button role="radio" data-theme="lava" style="--a:#7f1d1d;--b:#fb923c">Lava</button>
+          <button role="radio" data-theme="retro" style="--a:#052e16;--b:#22c55e">Retro</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="perf" id="performance">
+      <div class="head reveal">
+        <span class="eyebrow">Version 1.8.0</span>
+        <h2>Same island. <span class="grad">Half the weight.</span></h2>
+        <p>Measured side by side on the same PC, with the island resting on screen.</p>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><div class="big"><span data-count="2" data-dec="0">0</span>×</div><div class="what">less CPU</div>
+          <div class="bars"><div class="bar"><span>Before</span><i><b style="--w:100%"></b></i><span>0.97%</span></div><div class="bar new"><span>1.8</span><i><b style="--w:48%"></b></i><span>0.47%</span></div></div></div>
+        <div class="stat reveal"><div class="big"><span data-count="22" data-dec="0">0</span>%</div><div class="what">less memory</div>
+          <div class="bars"><div class="bar"><span>Before</span><i><b style="--w:100%"></b></i><span>193 MB</span></div><div class="bar new"><span>1.8</span><i><b style="--w:78%"></b></i><span>150 MB</span></div></div></div>
+        <div class="stat reveal"><div class="big">&lt;<span data-count="1" data-dec="0">0</span> MB</div><div class="what">download</div>
+          <div class="bars"><div class="bar"><span>Before</span><i><b style="--w:100%"></b></i><span>107 MB</span></div><div class="bar new"><span>1.8</span><i><b style="--w:1.5%"></b></i><span>0.86 MB</span></div></div></div>
+        <div class="stat reveal"><div class="big"><span data-count="2" data-dec="0">0</span> MB</div><div class="what">on your disk</div>
+          <div class="bars"><div class="bar"><span>Before</span><i><b style="--w:100%"></b></i><span>325 MB</span></div><div class="bar new"><span>1.8</span><i><b style="--w:1.5%"></b></i><span>2 MB</span></div></div></div>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="privacy reveal">
+      <div class="priv">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <div><h3>Private by design</h3><p>No account, no ads, no tracking. Your settings and messages stay on your PC, and the code is open for anyone to read.</p></div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="support" id="support">
+      <div class="head reveal">
+        <span class="eyebrow">Support Nova</span>
+        <h2>Buy Nova a <span class="grad">coffee</span> <span aria-hidden="true">☕</span></h2>
+        <p>Nova Island is free, with no ads and no tracking. If it makes your day a little better, a coffee keeps new features coming.</p>
+      </div>
+      <div class="tips">
+        <a class="tip reveal" href="https://ko-fi.com/binamer" target="_blank" rel="noopener">
+          <span class="tip-ico" style="--c: 255, 94, 91"><span aria-hidden="true">☕</span></span>
+          <span class="tip-txt"><b>Ko-fi</b><span>Card or PayPal, worldwide</span></span>
+          <span class="tip-go">Support <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="tip reveal" href="https://ipn.eg/S/binamerbm/instapay/38txJO" target="_blank" rel="noopener">
+          <span class="tip-ico" style="--c: 167, 139, 250"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg></span>
+          <span class="tip-txt"><b>InstaPay</b><span>From any bank in Egypt</span></span>
+          <span class="tip-go">Support <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="download reveal" id="download">
+      <img src="assets/logo-192.png" alt="" width="96" height="96" class="dl-logo">
+      <h2>Get Nova Island</h2>
+      <p>Free for Windows 10 and 11. Updates arrive on their own.</p>
+      <div class="ctas center">
+        <a class="store-btn" data-store href="https://apps.microsoft.com/detail/9PHV3N1V2H7M" target="_blank" rel="noopener" aria-label="Get Nova Island from the Microsoft Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M2 2h9.5v9.5H2z"/><path fill="#7fba00" d="M12.5 2H22v9.5h-9.5z"/><path fill="#00a4ef" d="M2 12.5h9.5V22H2z"/><path fill="#ffb900" d="M12.5 12.5H22V22h-9.5z"/></svg>
+          <span><small>Get it from</small>Microsoft Store</span>
+        </a>
+        <a class="btn btn-lg btn-primary" data-download href="https://github.com/NOVA-TECH-KIT/nova-island/releases/latest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span>Download for Windows <small data-size>· 0.9 MB</small></span>
+        </a>
+      </div>
+      <p class="dl-count" data-dl-count hidden><b></b> downloads so far</p>
+      <div class="switch-note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5"/></svg>
+        <p><b>Moving from the GitHub version to the Store?</b> Uninstall the old one first, so you don't end up with two islands: <b>Settings → Apps → Installed apps → Nova Island → Uninstall</b>. Your settings stay on your PC.</p>
+      </div>
+      <details class="faq">
+        <summary>Windows says "Windows protected your PC"?</summary>
+        <p>That shows for the direct download because the installer isn't code-signed yet. Choose <b>More info → Run anyway</b>. The Microsoft Store version doesn't show it.</p>
+      </details>
+      <p class="fine">Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>I</kbd> any time to open the island.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="brand"><img src="assets/logo-64.png" alt="" width="24" height="24">Nova Island</div>
+    <nav aria-label="Links">
+      <a href="https://github.com/NOVA-TECH-KIT/nova-island" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://t.me/nova4apps" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.facebook.com/nova4kit/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://ko-fi.com/binamer" target="_blank" rel="noopener">Support on Ko-fi</a>
+      <a href="https://github.com/NOVA-TECH-KIT/nova-island/blob/main/PRIVACY.md" target="_blank" rel="noopener">Privacy</a>
+    </nav>
+    <p>© 2026 AmerTech · Free and open source under GPL v3</p>
+  </footer>
+  <script src="app.js?v=1.8.0-4"></script>
+</body>
+</html>

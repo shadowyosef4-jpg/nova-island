@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>Nova characters</title>
+  <style>
+    @font-face { font-family: "Plex Arabic"; font-weight: 600; src: url("../assets/plex-arabic-600.woff2") format("woff2"); }
+    @font-face { font-family: "Plex Arabic"; font-weight: 400; src: url("../assets/plex-arabic-400.woff2") format("woff2"); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1600px; height: 1000px; overflow: hidden; color: #fff; font-family: "Plex Arabic", "Segoe UI", sans-serif;
+      background: radial-gradient(40% 50% at 12% 15%, rgba(124, 58, 237, .4), transparent 70%),
+                  radial-gradient(40% 50% at 88% 85%, rgba(59, 130, 246, .38), transparent 70%),
+                  linear-gradient(160deg, #110d26, #0b1128 60%, #09091a); }
+    h1 { position: absolute; top: 30px; right: 60px; margin: 0; font-size: 40px; font-weight: 600; direction: rtl; }
+    h1 small { display: block; font-size: 19px; font-weight: 400; color: rgba(255,255,255,.65); margin-top: 4px; }
+    .grid { position: absolute; top: 150px; left: 50px; right: 50px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; direction: rtl; }
+    .cell { position: relative; height: 380px; border-radius: 26px; background: rgba(255,255,255,.045); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+    .cell svg { direction: ltr; position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); overflow: visible; }
+    .cell .shadow { position: absolute; left: 50%; top: 66%; width: 110px; height: 14px; margin-left: -55px; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.55), transparent); }
+    .cell .name { position: absolute; bottom: 52px; left: 0; right: 0; text-align: center; font-size: 25px; font-weight: 600; }
+    .cell .desc { position: absolute; bottom: 20px; left: 16px; right: 16px; text-align: center; font-size: 15px; color: rgba(255,255,255,.62); }
+    .num { position: absolute; top: 14px; right: 20px; font: 600 22px "Segoe UI"; color: #ffd479; }
+    .pick { position: absolute; top: 14px; left: 18px; font-size: 13px; padding: 3px 10px; border-radius: 99px; background: rgba(255,212,121,.18); color: #ffd479; }
+  </style>
+</head>
+<body>
+  <h1>اختر شخصية الجزيرة<small>كلها بنفس العينين (الوجه ١)، زجاجية، بحجم صغير — وتتحرك: ترمش، تتأرجح، تلوّح</small></h1>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="gViolet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b7bff"/><stop offset=".55" stop-color="#5b6cff"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+      <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe39a"/><stop offset="1" stop-color="#f5a623"/></linearGradient>
+      <linearGradient id="gCyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a5f3fc"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+      <linearGradient id="gPeach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc69a"/><stop offset="1" stop-color="#ff8a5c"/></linearGradient>
+      <linearGradient id="gSteel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2e8f0"/><stop offset="1" stop-color="#94a3b8"/></linearGradient>
+      <linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a38"/><stop offset="1" stop-color="#101018"/></linearGradient>
+      <radialGradient id="shine" cx=".32" cy=".25" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="lamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3c4"/><stop offset=".6" stop-color="#ffd479"/><stop offset="1" stop-color="#f5a623"/></radialGradient>
+      <!-- face 1: two round eyes + small smile -->
+      <g id="face">
+        <rect x="-15" y="-9" width="10" height="14" rx="5" fill="#fff"/>
+        <rect x="5" y="-9" width="10" height="14" rx="5" fill="#fff"/>
+        <circle cx="-9" cy="-1" r="3.2" fill="#0b0b12"/>
+        <circle cx="11" cy="-1" r="3.2" fill="#0b0b12"/>
+        <path d="M-5 11 Q0 14.5 5 11" fill="none" stroke="#0b0b12" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <g id="faceDarkSmile">
+        <rect x="-15" y="-9" width="10" height="14" rx="5" fill="#fff"/>
+        <rect x="5" y="-9" width="10" height="14" rx="5" fill="#fff"/>
+        <circle cx="-9" cy="-1" r="3.2" fill="#0b0b12"/>
+        <circle cx="11" cy="-1" r="3.2" fill="#0b0b12"/>
+        <path d="M-5 11 Q0 14.5 5 11" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <g id="cheeks"><circle cx="-21" cy="8" r="3.6" fill="#ff8fb8" opacity=".55"/><circle cx="21" cy="8" r="3.6" fill="#ff8fb8" opacity=".55"/></g>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <!-- 1 blob -->
+    <div class="cell"><span class="num">1</span>
+      <div class="shadow"></div>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path d="M-10 26 L-12 52 M10 26 L12 52" stroke="#4c5dff" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="-14" cy="55" rx="9" ry="5.5" fill="#4c5dff"/><ellipse cx="14" cy="55" rx="9" ry="5.5" fill="#4c5dff"/>
+        <path d="M-30 6 Q-44 16 -40 30 M30 6 Q44 16 40 30" fill="none" stroke="#6c7bff" stroke-width="6" stroke-linecap="round"/>
+        <rect x="-32" y="-36" width="64" height="66" rx="28" fill="url(#gViolet)"/>
+        <rect x="-32" y="-36" width="64" height="66" rx="28" fill="url(#shine)"/>
+        <use href="#face"/><use href="#cheeks"/>
+      </svg>
+      <div class="name">نوفا</div><div class="desc">كرة زجاجية ناعمة — هادئة ولطيفة</div>
+    </div>
+
+    <!-- 2 star -->
+    <div class="cell"><span class="num">2</span>
+      <div class="shadow"></div>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path d="M-9 28 L-12 54 M9 28 L12 54" stroke="#e8a317" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="-14" cy="57" rx="9" ry="5.5" fill="#e8a317"/><ellipse cx="14" cy="57" rx="9" ry="5.5" fill="#e8a317"/>
+        <polygon points="0,-48 13,-17 46,-15 20,6 29,38 0,20 -29,38 -20,6 -46,-15 -13,-17" fill="url(#gGold)" stroke="url(#gGold)" stroke-width="12" stroke-linejoin="round"/>
+        <polygon points="0,-48 13,-17 46,-15 20,6 29,38 0,20 -29,38 -20,6 -46,-15 -13,-17" fill="url(#shine)"/>
+        <g transform="translate(0,2)"><use href="#face"/><use href="#cheeks"/></g>
+      </svg>
+      <div class="name">نجمة</div><div class="desc">ذهبية مشرقة — تلمع مع الأخبار الجيدة</div>
+    </div>
+
+    <!-- 3 drop -->
+    <div class="cell"><span class="num">3</span>
+      <div class="shadow"></div>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path d="M-10 36 L-12 56 M10 36 L12 56" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="-14" cy="59" rx="9" ry="5.5" fill="#2563eb"/><ellipse cx="14" cy="59" rx="9" ry="5.5" fill="#2563eb"/>
+        <path d="M-32 14 Q-44 22 -40 34 M32 14 Q44 22 40 34" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+        <path d="M0 -52 C18 -26 36 -6 36 14 A36 36 0 0 1 -36 14 C-36 -6 -18 -26 0 -52 Z" fill="url(#gCyan)"/>
+        <path d="M0 -52 C18 -26 36 -6 36 14 A36 36 0 0 1 -36 14 C-36 -6 -18 -26 0 -52 Z" fill="url(#shine)"/>
+        <g transform="translate(0,10)"><use href="#face"/><use href="#cheeks"/></g>
+      </svg>
+      <div class="name">قطرة</div><div class="desc">شفافة كالماء — خفيفة ومنعشة</div>
+    </div>
+
+    <!-- 4 cat -->
+    <div class="cell"><span class="num">4</span>
+      <div class="shadow"></div>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path d="M30 34 Q62 30 54 -4 Q50 -16 42 -10" fill="none" stroke="#ff8a5c" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-10 30 L-12 52 M10 30 L12 52" stroke="#ff8a5c" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="-14" cy="55" rx="9" ry="5.5" fill="#ff8a5c"/><ellipse cx="14" cy="55" rx="9" ry="5.5" fill="#ff8a5c"/>
+        <path d="M-34 -18 L-30 -50 L-8 -32 Z M34 -18 L30 -50 L8 -32 Z" fill="url(#gPeach)" stroke="url(#gPeach)" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M-27 -26 L-26 -40 L-15 -31 Z M27 -26 L26 -40 L15 -31 Z" fill="#ffb3c7"/>
+        <ellipse cx="0" cy="0" rx="40" ry="34" fill="url(#gPeach)"/>
+        <ellipse cx="0" cy="0" rx="40" ry="34" fill="url(#shine)"/>
+        <use href="#face"/>
+        <path d="M-24 8 h-16 M-24 13 l-15 4 M24 8 h16 M24 13 l15 4" stroke="#fff" stroke-opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M-3 6 l3 3 3 -3 z" fill="#ff6b8a"/>
+      </svg>
+      <div class="name">قطّة</div><div class="desc">بأذنين وذيل يتحرك — مرحة وفضولية</div>
+    </div>
+
+    <!-- 5 robot -->
+    <div class="cell"><span class="num">5</span>
+      <div class="shadow"></div>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path d="M0 -40 L0 -54" stroke="#94a3b8" stroke-width="3"/><circle cx="0" cy="-57" r="6" fill="#40c8ff"/><circle cx="0" cy="-57" r="12" fill="#40c8ff" opacity=".25"/>
+        <path d="M-10 30 L-12 52 M10 30 L12 52" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+        <rect x="-22" y="50" width="18" height="9" rx="4" fill="#64748b"/><rect x="4" y="50" width="18" height="9" rx="4" fill="#64748b"/>
+        <path d="M-36 6 L-46 26 M36 6 L46 26" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="-46" cy="28" r="5" fill="#64748b"/><circle cx="46" cy="28" r="5" fill="#64748b"/>
+        <rect x="-36" y="-40" width="72" height="70" rx="18" fill="url(#gSteel)"/>
+        <rect x="-36" y="-40" width="72" height="70" rx="18" fill="url(#shine)"/>
+        <rect x="-27" y="-28" width="54" height="40" rx="11" fill="#0d1220"/>
+        <rect x="-15" y="-18" width="10" height="14" rx="5" fill="#40c8ff"/><rect x="5" y="-18" width="10" height="14" rx="5" fill="#40c8ff"/>
+        <rect x="-15" y="-18" width="10" height="14" rx="5" fill="#40c8ff" opacity=".35" transform="scale(1.25) translate(2,-2)"/>
+        <path d="M-6 3 Q0 7 6 3" fill="none" stroke="#40c8ff" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="-26" cy="21" r="2.5" fill="#30d158"/><circle cx="-18" cy="21" r="2.5" fill="#ffd479"/>
+      </svg>
+      <div class="name">روبوت</div><div class="desc">عيناه تضيئان على شاشة — ذكي ودقيق</div>
+    </div>
+
+    <!-- 6 lantern -->
+    <div class="cell"><span class="num">6</span>
+      <div class="shadow"></div>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <circle cx="0" cy="0" r="62" fill="#ffd479" opacity=".14"/>
+        <path d="M0 -64 L0 -54" stroke="#c9a46a" stroke-width="3"/><circle cx="0" cy="-66" r="5" fill="none" stroke="#c9a46a" stroke-width="2.5"/>
+        <path d="M-10 36 L-12 54 M10 36 L12 54" stroke="#b7791f" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="-14" cy="57" rx="9" ry="5.5" fill="#b7791f"/><ellipse cx="14" cy="57" rx="9" ry="5.5" fill="#b7791f"/>
+        <path d="M-28 4 Q-44 12 -40 26 M28 4 Q44 12 40 26" fill="none" stroke="#d69e2e" stroke-width="6" stroke-linecap="round"/>
+        <path d="M-18 -54 L18 -54 L28 -40 L-28 -40 Z" fill="#8a5a1a" stroke="#e8b85c" stroke-width="2"/>
+        <path d="M-28 -40 L28 -40 L32 22 L24 34 L-24 34 L-32 22 Z" fill="url(#lamp)" stroke="#e8b85c" stroke-width="2.5"/>
+        <path d="M-10 -40 L-12 34 M10 -40 L12 34" stroke="#c98a2a" stroke-width="1.5" opacity=".7"/>
+        <path d="M-24 34 L24 34 L16 44 L-16 44 Z" fill="#8a5a1a" stroke="#e8b85c" stroke-width="2"/>
+        <g transform="translate(0,-6)"><use href="#face"/></g>
+      </svg>
+      <div class="name">فانوس</div><div class="desc">ضوء دافئ — يتوهّج عند الأذان وفي رمضان</div>
+    </div>
+
+    <!-- 7 capsule: the island itself -->
+    <div class="cell"><span class="num">7</span><span class="pick">يتحوّل من الجزيرة</span>
+      <div class="shadow" style="width:150px; margin-left:-75px"></div>
+      <svg width="220" height="200" viewBox="-110 -100 220 200">
+        <path d="M-18 18 L-20 50 M18 18 L20 50" stroke="#5a5a72" stroke-width="7" stroke-linecap="round"/>
+        <ellipse cx="-23" cy="53" rx="11" ry="6" fill="#4a4a60" stroke="#fff" stroke-opacity=".45"/><ellipse cx="23" cy="53" rx="11" ry="6" fill="#4a4a60" stroke="#fff" stroke-opacity=".45"/>
+        <path d="M-62 -2 Q-78 8 -72 24 M62 -2 Q78 -18 74 -38" fill="none" stroke="#5a5a72" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="74" cy="-42" r="7" fill="#5a5a72" stroke="#fff" stroke-opacity=".5"/>
+        <rect x="-66" y="-26" width="132" height="48" rx="24" fill="url(#gGlass)"/>
+        <rect x="-66" y="-26" width="132" height="48" rx="24" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1.5"/>
+        <rect x="-66" y="-26" width="132" height="24" rx="12" fill="#fff" opacity=".05"/>
+        <g transform="translate(0,-4)"><use href="#faceDarkSmile"/></g>
+      </svg>
+      <div class="name">الكبسولة</div><div class="desc">الجزيرة نفسها — تُنبت عينين ويدين وقدمين</div>
+    </div>
+
+    <!-- 8: mix note -->
+    <div class="cell" style="display:flex; align-items:center; justify-content:center; text-align:center; padding:30px">
+      <div style="font-size:22px; line-height:1.7; color:rgba(255,255,255,.8)">
+        يمكن <b style="color:#ffd479">الدمج</b>:<br>الكبسولة طوال اليوم،<br>وتلبس <b style="color:#ffd479">الفانوس</b> في رمضان<br>وعند الأذان 🌙
+      </div>
+    </div>
+  </div>
+</body>
+</html>

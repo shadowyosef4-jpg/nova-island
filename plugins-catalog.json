@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    {
+      "id": "quran-radio",
+      "price": "free",
+      "name": "Quran Radio",
+      "description": "Live Qur'an radio on the island: Cairo, Saudi and 170+ reciters",
+      "version": "1.0.0",
+      "size": 28498,
+      "sha256": "b7bcd11d0f34ba6dfe4685dec4d7b3868c9d28e6fd6ad72ac3e1bb0a7073dc55",
+      "url": "https://github.com/NOVA-TECH-KIT/nova-island-plugins/releases/download/quran-radio-1.0.0/quran-radio-1.0.0.nvp"
+    }
+  ],
+  "sig": "ePy7X6DYIuKuSI/1ZgRLVQ9iFhniTYw6fmyHCiwia52VU6DRiO2jyDQbiAOO18MGWw8c57bh1Tk0ZOcIXYWwDA=="
+}

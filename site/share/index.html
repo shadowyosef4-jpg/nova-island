@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Island - Ultimate File Share</title>
+  <link rel="stylesheet" href="share.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="#fff" fill="none" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      </div>
+      <div>
+        <h1>Nova Share</h1>
+      </div>
+      <span class="badge" id="access-badge">Full Drives Access</span>
+    </div>
+    <div class="header-actions">
+      <button class="btn" id="btn-toggle-view" title="Toggle List / Grid view">
+        <svg id="view-icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </button>
+      <button class="btn" id="btn-new-folder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+        New Folder
+      </button>
+      <button class="btn accent" id="btn-upload">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Upload
+      </button>
+      <input type="file" id="file-input" multiple style="display:none">
+    </div>
+  </header>
+
+  <main>
+    <!-- Navigation & Search Bar -->
+    <div class="nav-bar">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <span class="crumb current" data-path="">Drives Root</span>
+      </div>
+      <div class="toolbar">
+        <input type="search" class="search-box" id="search-input" placeholder="Search files...">
+        <button class="btn" id="btn-download-zip" title="Download folder as ZIP">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          ZIP
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter chips -->
+    <div class="filter-chips">
+      <button class="chip-btn active" data-filter="all">All Files</button>
+      <button class="chip-btn" data-filter="video">🎬 Videos</button>
+      <button class="chip-btn" data-filter="audio">🎵 Music</button>
+      <button class="chip-btn" data-filter="image">🖼️ Images</button>
+      <button class="chip-btn" data-filter="doc">📄 Documents</button>
+    </div>
+
+    <!-- Batch Selection Bar -->
+    <div class="batch-bar" id="batch-bar">
+      <span class="batch-info" id="batch-count">0 items selected</span>
+      <div class="batch-actions">
+        <button class="btn danger" id="btn-batch-delete">Delete Selected</button>
+        <button class="btn" id="btn-batch-clear">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Drag & Drop Zone -->
+    <div class="dropzone" id="dropzone">
+      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      <p><b>Drag &amp; Drop files here</b> to upload directly, or click to select</p>
+    </div>
+
+    <!-- Upload Progress -->
+    <div class="upload-progress" id="upload-progress">
+      <div style="display:flex; justify-content:space-between; font-size:0.85rem;">
+        <span id="upload-status">Uploading...</span>
+        <span id="upload-pct">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Files Container -->
+    <div class="files-container grid" id="files-list"></div>
+  </main>
+
+  <!-- Media Player Modal -->
+  <div class="modal-overlay" id="media-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="media-title">Media Preview</div>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="media-body"></div>
+    </div>
+  </div>
+
+  <!-- Prompt Modal -->
+  <div class="modal-overlay" id="prompt-modal">
+    <div class="prompt-box">
+      <h3 id="prompt-title">Folder Name</h3>
+      <input type="text" id="prompt-input" autocomplete="off">
+      <div class="prompt-actions">
+        <button class="btn" id="prompt-cancel">Cancel</button>
+        <button class="btn accent" id="prompt-ok">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="share.js"></script>
+</body>
+</html>

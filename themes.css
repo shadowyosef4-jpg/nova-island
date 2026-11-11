@@ -1,0 +1,132 @@
+/* Island themes, shared by the island (style.css) and the Settings gallery (prefs.css).
+   A theme is only colors and one still decoration: nothing in it moves, so every theme costs the
+   same as Original Nova. Solid themes (no --th-glass) also skip the screen capture behind the
+   glass, so they cost less.
+     --th-bg      the island's own surface (solid themes)
+     --th-tint    the color over the glass (glass themes)
+     --th-line    the outline, and --th-line-w its width
+     --th-deco    one still image over the surface (gradients only)
+     --th-text    the main text, --th-soft the secondary text, --th-hi the highlight
+     --th-solid   a glass theme's own look without glass (while a screen recorder runs) */
+[data-theme="original"] {
+  --th-glass: 1;
+  --th-tint: rgba(14, 14, 20, .52); --th-tint-strong: rgba(10, 10, 16, .64);
+  --th-line: rgba(255, 255, 255, .15); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(235, 235, 245, .7); --th-hi: #8cc8ff;
+  --th-solid: linear-gradient(180deg, #2a2d38, #1d1f27);
+  --th-prev: #262b3a;
+}
+[data-theme="bakka"] {
+  --th-bg: linear-gradient(180deg, #0d4337, #0a3229);
+  --th-deco: radial-gradient(60% 120% at 50% -30%, rgba(246, 216, 138, .16), transparent 70%);
+  --th-line: #c9a54c; --th-line-w: 1px;
+  --th-text: #f6ecd0; --th-soft: rgba(246, 236, 208, .72); --th-hi: #f6d88a;
+  --th-prev: #0c211c;
+}
+[data-theme="outline"] {
+  --th-glass: 1;
+  --th-tint: rgba(10, 10, 14, .38); --th-tint-strong: rgba(10, 10, 14, .62);
+  --th-line: rgba(255, 255, 255, .85); --th-line-w: 1.5px;
+  --th-text: #fff; --th-soft: rgba(255, 255, 255, .72); --th-hi: #fff;
+  --th-solid: linear-gradient(180deg, #2c303b, #1f222a);
+  --th-prev: #3a3f4d;
+}
+[data-theme="midnight"] {
+  --th-bg: #000;
+  --th-line: rgba(255, 255, 255, .06); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(255, 255, 255, .6); --th-hi: #fff;
+  --th-prev: #2b2f3a;
+}
+[data-theme="forest"] {
+  --th-bg: linear-gradient(180deg, #14301f, #0b1d13);
+  --th-deco:
+    radial-gradient(14px 20px at 8% 110%, #1f4d2e 60%, transparent 62%),
+    radial-gradient(18px 26px at 22% 115%, #183f26 60%, transparent 62%),
+    radial-gradient(16px 22px at 84% 112%, #1f4d2e 60%, transparent 62%),
+    radial-gradient(20px 28px at 95% 118%, #183f26 60%, transparent 62%);
+  --th-line: rgba(134, 239, 172, .22); --th-line-w: 1px;
+  --th-text: #ecfdf3; --th-soft: rgba(220, 252, 231, .7); --th-hi: #86efac;
+  --th-prev: #12251a;
+}
+[data-theme="snow"] {
+  --th-glass: 1;
+  --th-tint: rgba(22, 48, 84, .55); --th-tint-strong: rgba(18, 38, 68, .7);
+  --th-deco:
+    radial-gradient(1.6px 1.6px at 14% 26%, #fff, transparent), radial-gradient(1.2px 1.2px at 36% 62%, #fffc, transparent),
+    radial-gradient(1.8px 1.8px at 58% 20%, #fff, transparent), radial-gradient(1.2px 1.2px at 74% 58%, #fffc, transparent),
+    radial-gradient(1.6px 1.6px at 90% 30%, #fff, transparent),
+    linear-gradient(0deg, rgba(232, 241, 251, .85) 3px, transparent 3px);
+  --th-line: rgba(224, 242, 254, .35); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(224, 242, 254, .75); --th-hi: #bae6fd;
+  --th-solid: linear-gradient(180deg, #2d4f78, #1c3557);
+  --th-prev: #2c4a6e;
+}
+[data-theme="cat"] {
+  --th-bg: #2b2b33;
+  --th-line: rgba(247, 168, 196, .25); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(255, 255, 255, .7); --th-hi: #f7a8c4;
+  --th-ears: 1;
+  --th-prev: #3a3245;
+}
+[data-theme="galaxy"] {
+  --th-bg:
+    radial-gradient(60% 140% at 18% 20%, rgba(124, 58, 237, .75), transparent 60%),
+    radial-gradient(55% 140% at 85% 85%, rgba(219, 39, 119, .55), transparent 60%),
+    #0b0a24;
+  --th-deco:
+    radial-gradient(1.4px 1.4px at 12% 22%, #fff, transparent), radial-gradient(1px 1px at 30% 72%, #fffb, transparent),
+    radial-gradient(1.6px 1.6px at 51% 18%, #fff, transparent), radial-gradient(1px 1px at 63% 66%, #fffa, transparent),
+    radial-gradient(1.4px 1.4px at 80% 28%, #fff, transparent), radial-gradient(1px 1px at 92% 70%, #fffb, transparent);
+  --th-line: rgba(196, 181, 253, .3); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(237, 233, 254, .75); --th-hi: #fde68a;
+  --th-prev: #15122e;
+}
+[data-theme="aurora"] {
+  --th-bg:
+    radial-gradient(50% 160% at 20% 120%, rgba(13, 148, 136, .8), transparent 70%),
+    radial-gradient(45% 160% at 55% 130%, rgba(34, 197, 94, .55), transparent 70%),
+    radial-gradient(50% 160% at 88% 110%, rgba(109, 40, 217, .75), transparent 70%),
+    #07121c;
+  --th-line: rgba(94, 234, 212, .28); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(204, 251, 241, .75); --th-hi: #5eead4;
+  --th-prev: #0a1a22;
+}
+[data-theme="ocean"] {
+  --th-bg: linear-gradient(180deg, #0a3a5c, #062a44);
+  --th-deco:
+    radial-gradient(60% 12px at 20% 104%, rgba(56, 189, 248, .45), transparent 70%),
+    radial-gradient(55% 12px at 78% 106%, rgba(186, 230, 253, .3), transparent 70%);
+  --th-line: rgba(125, 211, 252, .3); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(224, 242, 254, .75); --th-hi: #7dd3fc;
+  --th-prev: #082136;
+}
+[data-theme="nody"] {
+  --th-light: 1;
+  --th-bg: linear-gradient(180deg, #fff1f6, #fde4ee);
+  --th-deco:
+    radial-gradient(4px 3px at 70% 22%, #f9a8d4 70%, transparent 72%),
+    radial-gradient(3px 2.5px at 82% 70%, #fbcfe8 70%, transparent 72%),
+    radial-gradient(3.5px 2.6px at 58% 78%, #f9a8d4 70%, transparent 72%),
+    radial-gradient(3px 2.2px at 92% 34%, #f472b6 70%, transparent 72%),
+    radial-gradient(2.6px 2px at 40% 18%, #fbcfe8 70%, transparent 72%);
+  --th-line: rgba(244, 114, 182, .45); --th-line-w: 1px;
+  --th-text: #831843; --th-soft: rgba(131, 24, 67, .68); --th-hi: #ec4899;
+  --th-prev: #f6c9d9;
+}
+[data-theme="lava"] {
+  --th-bg:
+    radial-gradient(45% 130% at 15% 135%, rgba(249, 115, 22, .85), transparent 65%),
+    radial-gradient(50% 130% at 75% 140%, rgba(220, 38, 38, .75), transparent 65%),
+    #1c0a05;
+  --th-line: rgba(253, 186, 116, .3); --th-line-w: 1px;
+  --th-text: #fff; --th-soft: rgba(254, 215, 170, .75); --th-hi: #fdba74;
+  --th-prev: #1f0e08;
+}
+[data-theme="retro"] {
+  --th-bg: #0d1410;
+  --th-line: #4ade80; --th-line-w: 2px;
+  --th-text: #4ade80; --th-soft: rgba(74, 222, 128, .7); --th-hi: #86efac;
+  --th-font: "Cascadia Mono", Consolas, "Courier New", monospace;
+  --th-radius: 5px;
+  --th-prev: #0b0f0c;
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "widgets-update-185",
+    "type": "update",
+    "title": "New: desktop widgets in Nova Island 1.8.5",
+    "body": "The next prayer, the date and a focus timer as glass widgets on your desktop. Click to get the update.",
+    "link": "https://github.com/NOVA-TECH-KIT/nova-island/releases/latest",
+    "maxVersion": "1.8.4",
+    "sig": "hO8o//ksmCH9snFmtsNp0vrARvjlN2+PsuSXjLiGT3ZKnPNLwN5ggfJnNXBxtI90yAYNTwHgsATDdypHGtXBAg=="
+  },
+  {
+    "id": "desktop-widgets",
+    "type": "news",
+    "title": "Desktop widgets are here",
+    "body": "Put the next prayer, the date, a focus timer and more on your desktop. Click to choose your widgets.",
+    "link": "nova://settings/widgets",
+    "minVersion": "1.8.5",
+    "sig": "FRVZ+X6pRdAyvJECX9G87hYIGpieNLo2KZfcxDhIVD/hWuzowP3XDsmJdQ804M0KA6YKALqTutuXvAoayzLdDQ=="
+  },
+  {
+    "id": "qr-nova-launch",
+    "type": "news",
+    "title": "New from Nova: QR Nova",
+    "body": "Beautiful QR codes in seconds. Free and open source. Click to download.",
+    "link": "https://github.com/NOVA-TECH-KIT/qr-nova/releases/latest",
+    "sig": "UssCDvPMYTO1wAENYCkrJ2sz+BRzO39cBH3RSKu9ez6G0PuDWt/vfb3tNWSAkmLh3ylj/j6CARhHSFwwuJk7AQ=="
+  },
+  {
+    "id": "quran-radio-plugin",
+    "type": "plugin",
+    "title": "New plugin: Quran Radio",
+    "body": "Live Qur'an radio on the island: Cairo, Saudi and 170+ reciters. Free. Click to install.",
+    "link": "nova://plugins/quran-radio",
+    "minVersion": "1.5.0",
+    "sig": "n7q54rc89XzdNnwn4tjBb2rh3A/jbjyg5HOQXtHMPXuY4DgOEvP84t05+GUlM6L2qtW9xnvD5l4jYBCuFWlbBQ=="
+  },
+  {
+    "id": "telegram-channel",
+    "type": "news",
+    "title": "Join Nova on Telegram",
+    "body": "Get new updates and features first. Click, then press \"Join · Telegram\" at the top of the page.",
+    "link": "https://github.com/NOVA-TECH-KIT/nova-island",
+    "sig": "Qn/JH0cJ/aZdktAfKsL0c3GE7z6M8Jq4nTU5aMQPRQoB6EnVUdm5mKrbz1A3+meIKtrYs+qY0+LMrB8iOf9lDA=="
+  }
+]
